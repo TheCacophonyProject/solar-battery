@@ -1,0 +1,676 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "bed04f10-ea18-42cf-881d-9db8ae111538")
+	(paper "A4")
+	(lib_symbols
+		(symbol "MY-18650-04-J_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BAT_P1"
+				(at 2.54 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MY-18650-04-J"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "cacophony-library:BAT-TH_MY-18650-04-J"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C19184125"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MY-18650-04-J_1_1_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.556 0) (xy 3.556 -0.508) (xy 1.524 -0.508) (xy 0.762 -1.016) (xy -0.762 -1.016) (xy -1.524 -0.508)
+						(xy -3.556 -0.508) (xy -3.556 0) (xy 3.556 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type color)
+						(color 255 255 194 1)
+					)
+				)
+				(pin unspecified line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "cacophony-library:MY-18650-05-J"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BAT_N2"
+				(at 2.54 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MY-18650-05-J"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "cacophony-library:BAT-TH_MY-18650-05-J"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C19184124"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MY-18650-05-J_1_1"
+				(rectangle
+					(start -3.556 0.508)
+					(end 3.556 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type color)
+						(color 255 255 194 1)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 0.508) (xy 3.048 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.016) (xy 2.54 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 1.524) (xy 2.032 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 2.032) (xy -1.524 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.524) (xy -2.032 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 1.016) (xy -2.54 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_out line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 71.12 71.12) (xy 71.12 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6642ea-3074-4758-8330-98af46b0812a")
+	)
+	(wire
+		(pts
+			(xy 67.31 72.39) (xy 71.12 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c18cfe6-6065-4574-bbe6-6ec81e714aa4")
+	)
+	(wire
+		(pts
+			(xy 67.31 58.42) (xy 71.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af6db897-d974-4c44-8a60-44e7bc06f8b9")
+	)
+	(wire
+		(pts
+			(xy 71.12 59.69) (xy 71.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3cf4002-a52d-4355-b903-fe6de4e504c5")
+	)
+	(hierarchical_label "BAT+"
+		(shape input)
+		(at 67.31 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4a343ae9-ac74-43e0-9db0-44d7bed7c770")
+	)
+	(hierarchical_label "BAT-"
+		(shape input)
+		(at 67.31 72.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b875bc8e-103e-4a51-917e-9a8f42702441")
+	)
+	(symbol
+		(lib_name "MY-18650-04-J_1")
+		(lib_id "cacophony-library:MY-18650-04-J")
+		(at 71.12 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ec72a00-40fe-40dc-b6b3-e2ec578d4119")
+		(property "Reference" "BAT_P601"
+			(at 74.93 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MY-18650-04-J"
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cacophony-library:BAT-TH_MY-18650-04-J"
+			(at 71.12 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C19184125"
+			(at 71.12 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "220cb943-bb27-4901-a5fc-c4bb068f05fc")
+		)
+		(instances
+			(project "solar-ltc4015"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/0b8be8d4-33b8-43f8-a621-cfffdb00adc1"
+					(reference "BAT_P601")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/3a146c5b-aeda-46d8-bbb1-89f188fd1177"
+					(reference "BAT_P1901")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/499a9f18-aee7-48eb-af0b-e42535883be8"
+					(reference "BAT_P1001")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/8473e5ab-1b52-4618-9c31-b55bc33a6e7d"
+					(reference "BAT_P801")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/9e6fc407-dbb1-4472-a1b4-0094514515a9"
+					(reference "BAT_P2201")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/af85c0ba-22f4-4087-9e51-1d9d939c93b2"
+					(reference "BAT_P1601")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/b643f6a1-2965-40ba-b1ad-c27e24b38dac"
+					(reference "BAT_P1201")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/c7f85434-bfd4-43a9-b463-07aadad70c05"
+					(reference "BAT_P2101")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f1b7b992-0993-4627-b1e1-1583daf42a9b"
+					(reference "BAT_P1401")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f58a21be-7995-45e8-8962-f9b43e211553"
+					(reference "BAT_P1701")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f5d793ba-31d2-4847-b901-c096bc7a4efe"
+					(reference "BAT_P2001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cacophony-library:MY-18650-05-J")
+		(at 71.12 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89bbc6d3-d0ab-4ec6-adee-5eb59e68b9f4")
+		(property "Reference" "BAT_N601"
+			(at 74.93 70.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MY-18650-05-J"
+			(at 71.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cacophony-library:BAT-TH_MY-18650-05-J"
+			(at 71.12 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C19184124"
+			(at 71.12 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 71.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "947b2196-33d1-4b1a-a0f0-e67a8c17afed")
+		)
+		(instances
+			(project "solar-ltc4015"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/0b8be8d4-33b8-43f8-a621-cfffdb00adc1"
+					(reference "BAT_N601")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/3a146c5b-aeda-46d8-bbb1-89f188fd1177"
+					(reference "BAT_N1901")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/499a9f18-aee7-48eb-af0b-e42535883be8"
+					(reference "BAT_N1001")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/8473e5ab-1b52-4618-9c31-b55bc33a6e7d"
+					(reference "BAT_N801")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/9e6fc407-dbb1-4472-a1b4-0094514515a9"
+					(reference "BAT_N2201")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/af85c0ba-22f4-4087-9e51-1d9d939c93b2"
+					(reference "BAT_N1601")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/b643f6a1-2965-40ba-b1ad-c27e24b38dac"
+					(reference "BAT_N1201")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/c7f85434-bfd4-43a9-b463-07aadad70c05"
+					(reference "BAT_N2101")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f1b7b992-0993-4627-b1e1-1583daf42a9b"
+					(reference "BAT_N1401")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f58a21be-7995-45e8-8962-f9b43e211553"
+					(reference "BAT_N1701")
+					(unit 1)
+				)
+				(path "/822b745e-d66e-4222-a6d2-360780548724/f5d793ba-31d2-4847-b901-c096bc7a4efe"
+					(reference "BAT_N2001")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
