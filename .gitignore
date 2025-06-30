@@ -49,4 +49,5 @@ jlcpcb/
 *.rpt
 
 
-
+replicate_layout.log
+kicadpartsplacer*
