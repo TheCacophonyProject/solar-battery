@@ -4478,6 +4478,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "LM76002RNPR"
+		(exclude_from_sim no)
+		(at 70.612 56.896 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "09f6324c-d712-4918-b4fa-09405b1b3f6a")
+	)
 	(text_box "TODO:\nInput/Output filters? C87510\nCan I reduce capacitors for the V_SYS since we are not using that as a power out?\nDo I need to do something do disalbe the couloumb counter on the LTC4015?\nShould I take the power out from the high side of the battery shunt resistor instead of the battery directly?\n"
 		(exclude_from_sim no)
 		(at 134.62 34.29 0)
