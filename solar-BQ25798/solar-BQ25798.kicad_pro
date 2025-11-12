@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1524,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -139,7 +139,7 @@
         "min_track_width": 0.0889,
         "min_via_annular_width": 0.05,
         "min_via_diameter": 0.35,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -196,6 +196,7 @@
         0.508,
         0.6,
         0.762,
+        0.95,
         0.95,
         1.0,
         1.5,
@@ -279,7 +280,7 @@
         0,
         0,
         0,
-        1,
+        0,
         0,
         0,
         0,
@@ -293,7 +294,7 @@
         1,
         0,
         0,
-        1,
+        0,
         0,
         2,
         2,
@@ -307,7 +308,7 @@
         0,
         0,
         0,
-        1,
+        0,
         0,
         1,
         0,
@@ -321,25 +322,11 @@
         0,
         0,
         0,
-        1,
+        0,
         1,
         2,
         1,
         1,
-        2
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
         2
       ],
       [
@@ -357,17 +344,31 @@
         2
       ],
       [
-        1,
-        1,
-        1,
-        1,
-        1,
         0,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         2
       ],
       [
@@ -377,37 +378,9 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
-        0,
-        2
-      ],
-      [
-        0,
-        2,
-        1,
-        2,
-        0,
-        0,
-        1,
-        0,
-        2,
-        2,
-        2,
-        2
-      ],
-      [
-        0,
-        2,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        2,
         0,
         0,
         2
@@ -416,10 +389,38 @@
         0,
         2,
         1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
         1,
         0,
         0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
         1,
+        1,
+        0,
+        0,
+        0,
         0,
         2,
         0,
@@ -481,6 +482,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -491,7 +493,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "solar-ltc4015.kicad_pro",
+    "filename": "solar-BQ25798.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -655,7 +657,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Value"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -703,72 +705,76 @@
       "Root"
     ],
     [
-      "9b73a7e5-6ad0-4316-a658-036f94c18b42",
-      "LTC4015 Sheet"
-    ],
-    [
       "1954682e-318a-48fb-aeae-a5001c6c6d91",
-      "cell_1"
+      "cell_S1_1"
     ],
     [
-      "a8df07bb-a7b2-4990-b33b-714d1a272388",
-      "cell_2"
+      "b6598a8f-150d-4ea3-a2df-bc29c53e63b4",
+      "cell_S1_2"
     ],
     [
-      "cc9fc7ba-fd8b-483f-89e7-49f1831e418c",
-      "cell_3"
+      "5987dba5-1a95-4ef7-a117-f2382a5fbab7",
+      "cell_S1_3"
     ],
     [
-      "051f8c1e-c964-46aa-bc9f-5ff2d0b2d8fb",
-      "cell_4"
+      "f3fd426b-7679-4e3b-a42f-15602e39f1cc",
+      "cell_S1_4"
     ],
     [
-      "57607a51-5677-4bd3-88d6-b51e48ae6ef4",
-      "cell_5"
+      "aa940a41-b8e1-4fff-9524-28163c2fcf85",
+      "cell_S1_5"
     ],
     [
-      "fb9dceed-81b8-4395-8b69-5690ff8108a6",
-      "cell_6"
+      "fbe747f2-2f73-4834-937d-012d4ee3fca8",
+      "cell_S1_6"
     ],
     [
-      "2037c556-38ee-49d3-bfae-a2c690544aa0",
-      "cell_7"
+      "90cb07b3-cdfd-4baf-a93f-12695ac0a007",
+      "cell_S1_7"
     ],
     [
-      "d1bc3e09-fc13-4497-a2b6-c3d6423a3091",
-      "cell_8"
+      "95b73007-f27b-436d-b949-cdaf0f4bdced",
+      "cell_S1_8"
     ],
     [
-      "8372d688-69d3-4ff2-9781-d748f83a2deb",
-      "cell_9"
+      "9b4927c1-a598-4b7c-a220-073a8b3ed993",
+      "cell_S1_9"
     ],
     [
-      "d561c7db-f2e4-49b3-8fac-2587425919b1",
-      "cell_10"
+      "fb697640-7dfe-4200-9157-175edc60a3a4",
+      "cell_S1_10"
     ],
     [
-      "c02e93fd-80e4-43e3-87f7-33a4f4e57130",
-      "cell_11"
+      "8ccc5fd6-e7e1-4c0e-acb1-d03c5c4fcc92",
+      "cell_S1_11"
     ],
     [
-      "d68bd59f-817f-40ef-8a7c-a4f71d696c1e",
-      "cell_12"
+      "6d1a0203-24e1-4899-b436-719d08bfba9f",
+      "cell_S1_12"
     ],
     [
-      "437e61c1-f547-4823-b593-5f06275f903e",
-      "cell_13"
+      "521eabc8-7f0f-4cdd-af6a-d897ae76655b",
+      "cell_S1_13"
     ],
     [
-      "6cd84410-936a-4acf-ac1c-6f538e56c498",
-      "cell_14"
+      "22f8fa6b-a92e-4b64-8337-29cf46352b64",
+      "cell_S1_14"
     ],
     [
-      "3d8e3aab-f221-44b9-87cb-27703137f5a7",
-      "cell_15"
+      "c8bbf610-e7fa-4020-ac68-038ccc768689",
+      "cell_S1_15"
     ],
     [
-      "7c20caf5-fe9e-4a5c-bac2-68cabfeaae32",
-      "cell_16"
+      "d84bfbfe-22f6-48d9-a29f-b45e9820ae80",
+      "BQ25798"
+    ],
+    [
+      "b1ef4f90-0d3f-4a4e-9654-3f8fe63204f1",
+      "BQ76920"
+    ],
+    [
+      "ac60c5ba-2ea6-4067-b746-38f3763e0366",
+      "ATtiny1616"
     ]
   ],
   "text_variables": {}

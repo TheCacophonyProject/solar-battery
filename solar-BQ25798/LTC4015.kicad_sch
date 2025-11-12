@@ -4550,7 +4550,7 @@
 		)
 		(uuid "9eb3b086-4ab9-4a8d-9559-96d3df108bf4")
 	)
-	(text_box "From Page 24 on datasheet.\nCells:\n1 cell: CELLS0 HIGH, CELLS1 LOW, CELLS2 LOW\n\nChemistry:\nLi-ion 4.1V: CHEM0 LOW, CHEM1 OPEN\n"
+	(text_box "From Page 24 on datasheet.\nCells:\n1 cell: CELLS0 HIGH, CELLS1 LOW, CELLS2 LOW\n\nChemistry:\nLi-ion 4.0V: CHEM0 LOW, CHEM1 OPEN\n"
 		(exclude_from_sim no)
 		(at 54.61 180.34 0)
 		(size 64.77 13.97)
@@ -8396,7 +8396,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05e68165-5c6b-4324-b7ea-1b091f99cdbf")
-		(property "Reference" "R202"
+		(property "Reference" "R1808"
 			(at 124.46 204.4699 0)
 			(effects
 				(font
@@ -8459,7 +8459,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R202")
+					(reference "R1808")
 					(unit 1)
 				)
 			)
@@ -8475,7 +8475,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07e4787f-caab-46ba-848e-291c5d1bb829")
-		(property "Reference" "#PWR01506"
+		(property "Reference" "#PWR01815"
 			(at 143.51 194.31 0)
 			(effects
 				(font
@@ -8526,7 +8526,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01506")
+					(reference "#PWR01815")
 					(unit 1)
 				)
 			)
@@ -8542,7 +8542,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0abe66a1-80fe-4694-a77c-7a8e97a12d13")
-		(property "Reference" "#PWR01508"
+		(property "Reference" "#PWR01803"
 			(at 158.75 100.33 0)
 			(effects
 				(font
@@ -8593,7 +8593,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01508")
+					(reference "#PWR01803")
 					(unit 1)
 				)
 			)
@@ -8610,7 +8610,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0bd1b95f-6023-4c55-96cb-7c208d828e73")
-		(property "Reference" "JP201"
+		(property "Reference" "JP1801"
 			(at 96.52 151.13 0)
 			(effects
 				(font
@@ -8666,7 +8666,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "JP201")
+					(reference "JP1801")
 					(unit 1)
 				)
 			)
@@ -8681,7 +8681,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0cad5845-b1de-4c80-adc0-183e811f49a3")
-		(property "Reference" "C213"
+		(property "Reference" "C1816"
 			(at 235.966 108.966 0)
 			(effects
 				(font
@@ -8742,7 +8742,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C213")
+					(reference "C1816")
 					(unit 1)
 				)
 			)
@@ -8758,7 +8758,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e4d54fb-7072-40e2-831c-b073de0a2339")
-		(property "Reference" "JP204"
+		(property "Reference" "JP1802"
 			(at 151.13 166.37 0)
 			(effects
 				(font
@@ -8814,7 +8814,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "JP204")
+					(reference "JP1802")
 					(unit 1)
 				)
 			)
@@ -8829,7 +8829,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "10c77dfb-929c-42cd-a5bb-695dbe23ec53")
-		(property "Reference" "R208"
+		(property "Reference" "R1811"
 			(at 148.844 214.376 90)
 			(effects
 				(font
@@ -8892,7 +8892,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R208")
+					(reference "R1811")
 					(unit 1)
 				)
 			)
@@ -8908,7 +8908,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "110921e2-9ed1-4e5c-bb20-419258632dfd")
-		(property "Reference" "#PWR01521"
+		(property "Reference" "#PWR01805"
 			(at 337.82 102.87 0)
 			(effects
 				(font
@@ -8959,7 +8959,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01521")
+					(reference "#PWR01805")
 					(unit 1)
 				)
 			)
@@ -8974,7 +8974,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1d90f2ac-7f5e-42f6-ade0-2b2f7c11bc17")
-		(property "Reference" "C214"
+		(property "Reference" "C1822"
 			(at 238.76 180.848 0)
 			(effects
 				(font
@@ -9035,7 +9035,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C214")
+					(reference "C1822")
 					(unit 1)
 				)
 			)
@@ -9051,7 +9051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1f8bb04c-df1d-4129-8ed8-2b72f28b2eef")
-		(property "Reference" "#PWR01524"
+		(property "Reference" "#PWR01818"
 			(at 388.62 205.74 0)
 			(effects
 				(font
@@ -9101,7 +9101,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01524")
+					(reference "#PWR01818")
 					(unit 1)
 				)
 			)
@@ -9117,7 +9117,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22194ec2-50ab-4509-b7c4-16ed751ce129")
-		(property "Reference" "#PWR01503"
+		(property "Reference" "#PWR01801"
 			(at 78.74 95.25 0)
 			(effects
 				(font
@@ -9168,7 +9168,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01503")
+					(reference "#PWR01801")
 					(unit 1)
 				)
 			)
@@ -9184,7 +9184,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22b36f36-0b1e-412b-8039-adb30f139ac6")
-		(property "Reference" "#PWR01507"
+		(property "Reference" "#PWR01813"
 			(at 157.48 177.8 0)
 			(effects
 				(font
@@ -9235,7 +9235,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01507")
+					(reference "#PWR01813")
 					(unit 1)
 				)
 			)
@@ -9251,7 +9251,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2924a3db-b5d5-4f3e-93e5-2061bf576ebd")
-		(property "Reference" "#PWR01504"
+		(property "Reference" "#PWR01819"
 			(at 137.16 223.52 0)
 			(effects
 				(font
@@ -9302,7 +9302,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01504")
+					(reference "#PWR01819")
 					(unit 1)
 				)
 			)
@@ -9318,7 +9318,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b08a75c-3178-488c-8732-c6b3e6db57c2")
-		(property "Reference" "R210"
+		(property "Reference" "R1801"
 			(at 252.73 78.74 90)
 			(effects
 				(font
@@ -9385,7 +9385,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R210")
+					(reference "R1801")
 					(unit 1)
 				)
 			)
@@ -9400,7 +9400,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2c4fd778-789f-4bdb-8d12-821aba46e7c2")
-		(property "Reference" "C206"
+		(property "Reference" "C1802"
 			(at 169.926 87.122 0)
 			(effects
 				(font
@@ -9461,7 +9461,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C206")
+					(reference "C1802")
 					(unit 1)
 				)
 			)
@@ -9476,7 +9476,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "368b4241-a8c6-4582-a477-9f6f2c01ec0a")
-		(property "Reference" "TH201"
+		(property "Reference" "TH1801"
 			(at 229.87 217.678 0)
 			(effects
 				(font
@@ -9539,7 +9539,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "TH201")
+					(reference "TH1801")
 					(unit 1)
 				)
 			)
@@ -9555,7 +9555,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e35280d-1473-475f-835b-c6882d3fa9b2")
-		(property "Reference" "#PWR01518"
+		(property "Reference" "#PWR01814"
 			(at 285.75 175.26 0)
 			(effects
 				(font
@@ -9606,7 +9606,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01518")
+					(reference "#PWR01814")
 					(unit 1)
 				)
 			)
@@ -9621,7 +9621,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45bf8327-223d-4aee-8bf3-244a67b2ac12")
-		(property "Reference" "C216"
+		(property "Reference" "C1817"
 			(at 248.412 120.142 90)
 			(effects
 				(font
@@ -9682,7 +9682,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C216")
+					(reference "C1817")
 					(unit 1)
 				)
 			)
@@ -9697,7 +9697,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "487f7d74-3c91-484d-aaef-a20b08862621")
-		(property "Reference" "C205"
+		(property "Reference" "C1815"
 			(at 160.274 108.966 0)
 			(effects
 				(font
@@ -9758,7 +9758,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C205")
+					(reference "C1815")
 					(unit 1)
 				)
 			)
@@ -9773,7 +9773,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4bd1a044-2c6d-4145-8fdc-7f2734fd585a")
-		(property "Reference" "C223"
+		(property "Reference" "C1807"
 			(at 320.04 86.868 0)
 			(effects
 				(font
@@ -9834,7 +9834,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C223")
+					(reference "C1807")
 					(unit 1)
 				)
 			)
@@ -9850,7 +9850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f3d91e6-91c2-4a17-a72d-a2c1d5f14029")
-		(property "Reference" "#PWR01501"
+		(property "Reference" "#PWR01811"
 			(at 80.01 175.26 0)
 			(effects
 				(font
@@ -9901,7 +9901,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01501")
+					(reference "#PWR01811")
 					(unit 1)
 				)
 			)
@@ -9916,7 +9916,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56d4c2d3-e5e3-4981-a0d2-08a99790f78a")
-		(property "Reference" "C224"
+		(property "Reference" "C1812"
 			(at 320.04 104.648 0)
 			(effects
 				(font
@@ -9977,7 +9977,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C224")
+					(reference "C1812")
 					(unit 1)
 				)
 			)
@@ -9993,7 +9993,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a15c9da-c94b-450f-8fe8-d9766f26a89c")
-		(property "Reference" "#FLG01502"
+		(property "Reference" "#FLG01802"
 			(at 379.73 201.295 0)
 			(effects
 				(font
@@ -10043,7 +10043,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#FLG01502")
+					(reference "#FLG01802")
 					(unit 1)
 				)
 			)
@@ -10058,7 +10058,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5ac64e9f-634f-40f8-b68e-10e12ad4e0d4")
-		(property "Reference" "Q202"
+		(property "Reference" "Q1803"
 			(at 294.386 144.78 0)
 			(effects
 				(font
@@ -10145,7 +10145,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "Q202")
+					(reference "Q1803")
 					(unit 1)
 				)
 			)
@@ -10161,7 +10161,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bc935f5-d715-4059-85ee-b495b8d44d6f")
-		(property "Reference" "#PWR01510"
+		(property "Reference" "#PWR01812"
 			(at 165.1 175.26 0)
 			(effects
 				(font
@@ -10212,7 +10212,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01510")
+					(reference "#PWR01812")
 					(unit 1)
 				)
 			)
@@ -10227,7 +10227,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5be7533a-096d-48cc-9809-cf25bb96c01c")
-		(property "Reference" "C209"
+		(property "Reference" "C1810"
 			(at 198.12 89.662 0)
 			(effects
 				(font
@@ -10288,7 +10288,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C209")
+					(reference "C1810")
 					(unit 1)
 				)
 			)
@@ -10304,7 +10304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f189334-7110-4d0d-9b90-2f9d04334329")
-		(property "Reference" "R207"
+		(property "Reference" "R1806"
 			(at 146.05 151.13 90)
 			(effects
 				(font
@@ -10365,7 +10365,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R207")
+					(reference "R1806")
 					(unit 1)
 				)
 			)
@@ -10380,7 +10380,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "60291644-bca8-4f4c-b258-6cec25790bfe")
-		(property "Reference" "C215"
+		(property "Reference" "C1818"
 			(at 245.11 139.7 0)
 			(effects
 				(font
@@ -10441,7 +10441,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C215")
+					(reference "C1818")
 					(unit 1)
 				)
 			)
@@ -10457,7 +10457,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "648c3dc4-cd2e-41b7-8a31-db24d945df0d")
-		(property "Reference" "U201"
+		(property "Reference" "U1801"
 			(at 195.58 109.22 0)
 			(effects
 				(font
@@ -10629,7 +10629,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "U201")
+					(reference "U1801")
 					(unit 1)
 				)
 			)
@@ -10645,7 +10645,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "66862caf-bdb4-44aa-8e9f-2ad8389fb94b")
-		(property "Reference" "R204"
+		(property "Reference" "R1810"
 			(at 139.7 210.8199 0)
 			(effects
 				(font
@@ -10654,7 +10654,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100k"
 			(at 139.7 213.3599 0)
 			(effects
 				(font
@@ -10690,6 +10690,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C25741"
+			(at 137.16 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "dcda53c1-71c4-4d14-bed6-27c7ff423c01")
 		)
@@ -10699,7 +10708,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R204")
+					(reference "R1810")
 					(unit 1)
 				)
 			)
@@ -10715,7 +10724,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6a9d5ea5-97ff-43e6-a80f-3d294b98a11a")
-		(property "Reference" "Q202"
+		(property "Reference" "Q1803"
 			(at 294.386 161.29 0)
 			(effects
 				(font
@@ -10802,7 +10811,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "Q202")
+					(reference "Q1803")
 					(unit 2)
 				)
 			)
@@ -10817,7 +10826,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6b50c43f-77ba-4092-a8f3-672da1808343")
-		(property "Reference" "C203"
+		(property "Reference" "C1826"
 			(at 161.29 210.058 0)
 			(effects
 				(font
@@ -10878,7 +10887,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C203")
+					(reference "C1826")
 					(unit 1)
 				)
 			)
@@ -10894,7 +10903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6d7caae0-7e35-4a4e-b7d9-fdae140f7307")
-		(property "Reference" "#PWR01512"
+		(property "Reference" "#PWR01823"
 			(at 193.04 233.68 0)
 			(effects
 				(font
@@ -10945,7 +10954,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01512")
+					(reference "#PWR01823")
 					(unit 1)
 				)
 			)
@@ -10961,7 +10970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e2eb42f-2748-4294-ba24-7f677cc39027")
-		(property "Reference" "L201"
+		(property "Reference" "L1801"
 			(at 304.8 153.67 90)
 			(effects
 				(font
@@ -11022,7 +11031,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "L201")
+					(reference "L1801")
 					(unit 1)
 				)
 			)
@@ -11037,7 +11046,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "71d45215-92b1-471c-aadc-be9684770419")
-		(property "Reference" "C218"
+		(property "Reference" "C1805"
 			(at 302.26 87.122 0)
 			(effects
 				(font
@@ -11098,7 +11107,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C218")
+					(reference "C1805")
 					(unit 1)
 				)
 			)
@@ -11114,7 +11123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75042cba-50a4-4d13-bd5f-fcea881b5f77")
-		(property "Reference" "R205"
+		(property "Reference" "R1802"
 			(at 144.78 97.7899 0)
 			(effects
 				(font
@@ -11177,7 +11186,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R205")
+					(reference "R1802")
 					(unit 1)
 				)
 			)
@@ -11192,7 +11201,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "78971a86-5344-4e4e-9a42-dac87f3d8630")
-		(property "Reference" "C204"
+		(property "Reference" "C1801"
 			(at 161.036 87.122 0)
 			(effects
 				(font
@@ -11253,7 +11262,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C204")
+					(reference "C1801")
 					(unit 1)
 				)
 			)
@@ -11268,7 +11277,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ac7381d-a0d5-4f78-bb9a-c80e0f589c19")
-		(property "Reference" "C210"
+		(property "Reference" "C1821"
 			(at 230.886 170.688 0)
 			(effects
 				(font
@@ -11329,7 +11338,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C210")
+					(reference "C1821")
 					(unit 1)
 				)
 			)
@@ -11345,7 +11354,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "804b7f7d-e988-46f5-9481-877b08d980f6")
-		(property "Reference" "#PWR01519"
+		(property "Reference" "#PWR01802"
 			(at 306.07 99.06 0)
 			(effects
 				(font
@@ -11396,7 +11405,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01519")
+					(reference "#PWR01802")
 					(unit 1)
 				)
 			)
@@ -11412,7 +11421,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "823d7569-b0f2-416a-997f-1225f5e3bf0d")
-		(property "Reference" "#PWR01515"
+		(property "Reference" "#PWR01809"
 			(at 240.03 148.59 0)
 			(effects
 				(font
@@ -11463,7 +11472,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01515")
+					(reference "#PWR01809")
 					(unit 1)
 				)
 			)
@@ -11480,7 +11489,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84dc90e5-710f-4556-84df-c9b35dca93ea")
-		(property "Reference" "JP202"
+		(property "Reference" "JP1803"
 			(at 137.16 172.72 0)
 			(effects
 				(font
@@ -11536,7 +11545,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "JP202")
+					(reference "JP1803")
 					(unit 1)
 				)
 			)
@@ -11551,7 +11560,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "86caa1e3-d684-4562-afc6-35355e1fedba")
-		(property "Reference" "C201"
+		(property "Reference" "C1827"
 			(at 116.078 211.582 0)
 			(effects
 				(font
@@ -11612,7 +11621,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C201")
+					(reference "C1827")
 					(unit 1)
 				)
 			)
@@ -11627,7 +11636,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87632d64-d3c4-4361-9fde-5e6d5824965c")
-		(property "Reference" "R212"
+		(property "Reference" "R1809"
 			(at 230.886 206.756 90)
 			(effects
 				(font
@@ -11688,7 +11697,7 @@
 		(instances
 			(project "kicadpartsplacer"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R212")
+					(reference "R1809")
 					(unit 1)
 				)
 			)
@@ -11704,7 +11713,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ca14f90-fe60-4846-965b-2e61f627169b")
-		(property "Reference" "#PWR01505"
+		(property "Reference" "#PWR01808"
 			(at 142.24 120.65 0)
 			(effects
 				(font
@@ -11755,7 +11764,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01505")
+					(reference "#PWR01808")
 					(unit 1)
 				)
 			)
@@ -11770,7 +11779,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "92afcbc0-1396-43b9-b9e5-69d191e93a26")
-		(property "Reference" "C207"
+		(property "Reference" "C1803"
 			(at 178.816 87.122 0)
 			(effects
 				(font
@@ -11831,7 +11840,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C207")
+					(reference "C1803")
 					(unit 1)
 				)
 			)
@@ -11847,7 +11856,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93b3ef6a-3d3e-4164-a41c-2efc28a87d60")
-		(property "Reference" "#PWR01520"
+		(property "Reference" "#PWR01820"
 			(at 346.71 223.52 0)
 			(effects
 				(font
@@ -11898,7 +11907,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01520")
+					(reference "#PWR01820")
 					(unit 1)
 				)
 			)
@@ -11913,7 +11922,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "94ab41a9-ab27-41ef-9e78-d5b7f4a4b20c")
-		(property "Reference" "C226"
+		(property "Reference" "C1813"
 			(at 327.66 104.648 0)
 			(effects
 				(font
@@ -11974,7 +11983,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C226")
+					(reference "C1813")
 					(unit 1)
 				)
 			)
@@ -11990,7 +11999,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9673f3c7-a4e1-4686-82d1-be809c0a670a")
-		(property "Reference" "D201"
+		(property "Reference" "D1801"
 			(at 231.14 138.4299 90)
 			(effects
 				(font
@@ -12071,7 +12080,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "D201")
+					(reference "D1801")
 					(unit 1)
 				)
 			)
@@ -12086,7 +12095,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "98a7501a-d883-438b-9500-d195bed95382")
-		(property "Reference" "C220"
+		(property "Reference" "C1806"
 			(at 312.42 86.868 0)
 			(effects
 				(font
@@ -12147,7 +12156,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C220")
+					(reference "C1806")
 					(unit 1)
 				)
 			)
@@ -12163,7 +12172,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b8b4c6b-ec4a-40da-8447-32fed40fd998")
-		(property "Reference" "#PWR01511"
+		(property "Reference" "#PWR01816"
 			(at 165.1 200.66 0)
 			(effects
 				(font
@@ -12214,7 +12223,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01511")
+					(reference "#PWR01816")
 					(unit 1)
 				)
 			)
@@ -12230,7 +12239,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d8ab764-88ac-4024-9662-459ae756277f")
-		(property "Reference" "#FLG01501"
+		(property "Reference" "#FLG01801"
 			(at 82.55 89.535 0)
 			(effects
 				(font
@@ -12280,7 +12289,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#FLG01501")
+					(reference "#FLG01801")
 					(unit 1)
 				)
 			)
@@ -12296,7 +12305,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ed73b3b-b8db-47ad-a130-17da29c3be77")
-		(property "Reference" "#PWR01516"
+		(property "Reference" "#PWR01822"
 			(at 240.03 232.41 0)
 			(effects
 				(font
@@ -12347,7 +12356,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01516")
+					(reference "#PWR01822")
 					(unit 1)
 				)
 			)
@@ -12363,7 +12372,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2b8375d-a9b2-456c-b23d-7705633e2050")
-		(property "Reference" "#PWR01513"
+		(property "Reference" "#PWR01804"
 			(at 201.93 101.6 0)
 			(effects
 				(font
@@ -12414,7 +12423,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01513")
+					(reference "#PWR01804")
 					(unit 1)
 				)
 			)
@@ -12430,7 +12439,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a49fb7dd-5460-43a5-8d7d-30e9d4542066")
-		(property "Reference" "R201"
+		(property "Reference" "R1804"
 			(at 116.84 151.1299 0)
 			(effects
 				(font
@@ -12493,7 +12502,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R201")
+					(reference "R1804")
 					(unit 1)
 				)
 			)
@@ -12508,7 +12517,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b33d3d37-8065-414b-9c99-ab492ccf78df")
-		(property "Reference" "C222"
+		(property "Reference" "C1825"
 			(at 353.568 206.756 0)
 			(effects
 				(font
@@ -12569,7 +12578,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C222")
+					(reference "C1825")
 					(unit 1)
 				)
 			)
@@ -12585,7 +12594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4ee6b8e-ab38-4435-acab-3a58b1b2e0a4")
-		(property "Reference" "#PWR01517"
+		(property "Reference" "#PWR01810"
 			(at 251.46 148.59 0)
 			(effects
 				(font
@@ -12636,7 +12645,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01517")
+					(reference "#PWR01810")
 					(unit 1)
 				)
 			)
@@ -12652,7 +12661,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b64ab828-a378-4e31-a36e-7d7e1549197d")
-		(property "Reference" "R203"
+		(property "Reference" "R1805"
 			(at 125.73 151.1299 0)
 			(effects
 				(font
@@ -12715,7 +12724,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R203")
+					(reference "R1805")
 					(unit 1)
 				)
 			)
@@ -12730,7 +12739,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "baff8903-45fd-4374-90cd-f21c8cf20339")
-		(property "Reference" "C212"
+		(property "Reference" "C1820"
 			(at 230.886 146.812 0)
 			(effects
 				(font
@@ -12791,7 +12800,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C212")
+					(reference "C1820")
 					(unit 1)
 				)
 			)
@@ -12806,7 +12815,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd9df71c-f1e8-4fe1-96b1-51f8e48d57e1")
-		(property "Reference" "C227"
+		(property "Reference" "C1809"
 			(at 335.28 86.868 0)
 			(effects
 				(font
@@ -12867,7 +12876,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C227")
+					(reference "C1809")
 					(unit 1)
 				)
 			)
@@ -12882,7 +12891,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6514292-e5bd-49b2-973b-c4f53f9d3330")
-		(property "Reference" "C217"
+		(property "Reference" "C1819"
 			(at 256.54 139.7 0)
 			(effects
 				(font
@@ -12943,7 +12952,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C217")
+					(reference "C1819")
 					(unit 1)
 				)
 			)
@@ -12959,7 +12968,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ca0b159c-6534-498e-a692-346c1eafaf7e")
-		(property "Reference" "Q201"
+		(property "Reference" "Q1801"
 			(at 227.395 69.85 90)
 			(effects
 				(font
@@ -13038,7 +13047,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "Q201")
+					(reference "Q1801")
 					(unit 1)
 				)
 			)
@@ -13053,7 +13062,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cd2690bd-9ec8-4de4-8fb2-b34453b66102")
-		(property "Reference" "C221"
+		(property "Reference" "C1811"
 			(at 312.42 104.648 0)
 			(effects
 				(font
@@ -13114,7 +13123,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C221")
+					(reference "C1811")
 					(unit 1)
 				)
 			)
@@ -13129,7 +13138,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d2c02120-efbd-4b4a-a558-d309fe297a88")
-		(property "Reference" "C202"
+		(property "Reference" "C1828"
 			(at 126.238 211.582 0)
 			(effects
 				(font
@@ -13190,7 +13199,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C202")
+					(reference "C1828")
 					(unit 1)
 				)
 			)
@@ -13206,7 +13215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3c8329a-b4c1-4d51-b356-3856ac0ee406")
-		(property "Reference" "#PWR01522"
+		(property "Reference" "#PWR01807"
 			(at 337.82 118.11 0)
 			(effects
 				(font
@@ -13257,7 +13266,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01522")
+					(reference "#PWR01807")
 					(unit 1)
 				)
 			)
@@ -13272,7 +13281,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d66af069-7a40-4000-b70e-f3d2029a6b24")
-		(property "Reference" "C225"
+		(property "Reference" "C1808"
 			(at 327.66 86.868 0)
 			(effects
 				(font
@@ -13333,7 +13342,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C225")
+					(reference "C1808")
 					(unit 1)
 				)
 			)
@@ -13349,7 +13358,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d97eca74-2426-4af5-bf0f-c1aa7eb019b1")
-		(property "Reference" "R211"
+		(property "Reference" "R1807"
 			(at 344.17 177.7999 0)
 			(effects
 				(font
@@ -13418,7 +13427,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R211")
+					(reference "R1807")
 					(unit 1)
 				)
 			)
@@ -13429,12 +13438,12 @@
 		(at 73.66 162.56 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de351e90-faa3-4960-a790-90948dd232d9")
-		(property "Reference" "J201"
+		(property "Reference" "J1801"
 			(at 73.66 151.13 0)
 			(effects
 				(font
@@ -13495,7 +13504,7 @@
 		(instances
 			(project ""
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "J201")
+					(reference "J1801")
 					(unit 1)
 				)
 			)
@@ -13510,7 +13519,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e187c8eb-2029-472a-96b0-4f795f928c0a")
-		(property "Reference" "C228"
+		(property "Reference" "C1814"
 			(at 335.28 104.648 0)
 			(effects
 				(font
@@ -13571,7 +13580,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C228")
+					(reference "C1814")
 					(unit 1)
 				)
 			)
@@ -13586,7 +13595,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e3e3e222-3dbf-494d-89a9-f97cd0f90605")
-		(property "Reference" "C208"
+		(property "Reference" "C1804"
 			(at 187.706 87.122 0)
 			(effects
 				(font
@@ -13647,7 +13656,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C208")
+					(reference "C1804")
 					(unit 1)
 				)
 			)
@@ -13663,7 +13672,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e4c650c5-e582-4ec7-a502-63487f92e6e3")
-		(property "Reference" "Q203"
+		(property "Reference" "Q1802"
 			(at 347.98 129.5399 0)
 			(effects
 				(font
@@ -13735,7 +13744,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "Q203")
+					(reference "Q1802")
 					(unit 1)
 				)
 			)
@@ -13751,7 +13760,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb2e255d-6237-472e-bc34-beca96c3f503")
-		(property "Reference" "JP203"
+		(property "Reference" "JP1804"
 			(at 137.16 190.5 0)
 			(effects
 				(font
@@ -13807,7 +13816,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "JP203")
+					(reference "JP1804")
 					(unit 1)
 				)
 			)
@@ -13822,7 +13831,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ebb25e53-cb93-4f94-92b8-eec67432c6a1")
-		(property "Reference" "R206"
+		(property "Reference" "R1803"
 			(at 144.78 107.9499 0)
 			(effects
 				(font
@@ -13885,7 +13894,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "R206")
+					(reference "R1803")
 					(unit 1)
 				)
 			)
@@ -13901,7 +13910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f250ba48-0a71-4c20-8e6f-692db698b8de")
-		(property "Reference" "#PWR01514"
+		(property "Reference" "#PWR01817"
 			(at 227.33 208.28 0)
 			(effects
 				(font
@@ -13952,7 +13961,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01514")
+					(reference "#PWR01817")
 					(unit 1)
 				)
 			)
@@ -13967,7 +13976,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f3211f5f-c46d-448b-98ca-462b37b0f05a")
-		(property "Reference" "C211"
+		(property "Reference" "C1823"
 			(at 230.124 200.406 0)
 			(effects
 				(font
@@ -14028,7 +14037,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C211")
+					(reference "C1823")
 					(unit 1)
 				)
 			)
@@ -14043,7 +14052,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f3377d95-5bdd-44af-8469-e7bebc41c635")
-		(property "Reference" "C219"
+		(property "Reference" "C1824"
 			(at 344.424 207.01 0)
 			(effects
 				(font
@@ -14104,7 +14113,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "C219")
+					(reference "C1824")
 					(unit 1)
 				)
 			)
@@ -14120,7 +14129,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa1cd739-cd73-4a16-ad0e-e60ad04b7e55")
-		(property "Reference" "#PWR01502"
+		(property "Reference" "#PWR01821"
 			(at 116.84 224.79 0)
 			(effects
 				(font
@@ -14171,7 +14180,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01502")
+					(reference "#PWR01821")
 					(unit 1)
 				)
 			)
@@ -14187,7 +14196,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcbfa228-2082-4e1d-9269-1da5e007824a")
-		(property "Reference" "#PWR01509"
+		(property "Reference" "#PWR01806"
 			(at 165.1 118.11 0)
 			(effects
 				(font
@@ -14238,7 +14247,7 @@
 		(instances
 			(project "solar-ltc4015"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/9b73a7e5-6ad0-4316-a658-036f94c18b42"
-					(reference "#PWR01509")
+					(reference "#PWR01806")
 					(unit 1)
 				)
 			)

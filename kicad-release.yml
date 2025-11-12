@@ -1,0 +1,26 @@
+project_name: solar-battery
+output: production-files
+
+# {{.Version}} will be replaced with the git tag. 
+
+# List of PCBs that will be processed. This will:
+# - Validate the Schematic ERC
+# - Validate the PCB DRC
+# - Make release files (gerber, BOM, placement file)
+pcbs:
+- id: solar-ltc4015
+  text_variables:
+    - key: TAG
+      val: {{.Version}}
+
+
+# TODO, make this work.
+# Release project. This will:
+# - Build the project as normal.
+# - Generate a tag and release on github.
+# - Upload production files to github.
+release:
+  github:
+    owner: TheCacophonyProject
+    name: tc2-hat-controller
+  name_template: '{{.Tag}}'
