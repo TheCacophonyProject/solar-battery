@@ -176,19 +176,51 @@ module screw_cutout() {
         translate([0, 0, a])
         cylinder(d=screw_head_diameter, h=h8);
         
-    //    translate([0, 10, h8/2+a])
-    //    cube([screw_head_diameter*2, 1, h8], center=true);
+        translate([0, 10, h8/2+a])
+        cube([screw_head_diameter*2, 1, h8], center=true);
     }
 }
 
-//!screw_cutout();
+// A 
+module support_bar(width, length) {
+    r = 4;
+    wall_t = 1.3;
 
-module battery() {
-    tab_n = -35;
+    dx = cos(30)*r*2+wall_t;
+    dy = sin(60)*dx;
+
     
-    bat_d = 18.5;
-    bat_c=1;
-    bat_h=1;
+    union() {
+        difference() {
+            cube([length, width, 30], center=true);
+            translate([-length/2-0.5*dx, -dy*1.5, 0])
+            for (n = [0:4]) {
+                translate([0, dy*2*n, 0])
+                for (i = [0:30]) {
+                    translate([dx*i, 0, 0])
+                    rotate([0, 0, 30])
+                    cylinder(r=r, $fa=60, h=31, center=true);
+                    translate([0.5*dx+i*dx, dy, 0])
+                    rotate([0, 0, 30])
+                    cylinder(r=r, $fa=60, h=31, center=true);
+                }
+            } 
+        }
+
+        difference() {
+            cube([length, width, 30], center=true);
+            cube([length+1, width-wall_t*2, 40], center=true);
+        }
+    }
+}
+
+//!support_bar(20, 100);
+
+bat_d = 18.5;
+bat_h=1;
+tab_n = -35;
+module battery() {
+    bat_c=0.1;
     tab_h=17;
     tab_t=2;
     tab_x=14.2;
@@ -382,11 +414,67 @@ union() {
 !scale([1, -1, 1])
 union() {
     difference() {
-        // Main body
-        linear_extrude(height = h8)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        // Intersection of the main projection and the other parts
+        intersection() {
+            // Main body
+            linear_extrude(height = h8)
+            projection()
+            boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+            
+            union() {
+            
+            // Plastic around the cells
+                translate([53.075, 0, h8-(bat_d/2+bat_h)-0.5])
+                for (i = [0:6]) {
+                    translate([-i*bat_to_bat, 0, 0])    
+                    rotate([0, 0, battery_top_rotations[i]*180])
+                    
+                    rotate([90, 0, 0])
+                    cylinder(d=bat_d+2.6, h=tab_p-tab_n+4, center=true);
 
+                    translate([-i*bat_to_bat, 0, 0])
+                    cube([10+3, 16, 100], center=true);
+                }
+                
+                // Bolt cutout
+                for (i = [0:13]) {
+                    //translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+                    //cylinder(d=screw_hole_diameter, h=40, center=true);
+
+                    if (i == 2 || i == 11) {
+                        translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+                        cylinder(d=10, h=100, center=true);
+                        translate([screw_hole_dx*i-72.375, -screw_hole_y, 0])
+                        cylinder(d=10, h=100, center=true);
+                    }
+                }
+
+                
+                support_bar(16, width_max);
+
+                translate([0, depth_max/2-8, 0])
+                support_bar(12, width_max);
+
+                translate([0, -depth_max/2+8, 0])
+                support_bar(12, width_max);
+                
+            
+                wall_t = 1.5;
+                difference() {
+                    linear_extrude(height = h8)
+                    projection()
+                    boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+
+                    translate([0, 0, -1])
+                    linear_extrude(height = h8+2)
+                    projection()
+                    boarder(width_max-wall_t*2, depth_max-wall_t*2, corner_cutout, corner_cutout_radius+wall_t, depth-wall_t*2, width-wall_t*2);
+                    
+                }
+
+            }
+            
+        }
         // Battery cutout
         scale([1, -1, 1])
         translate([53.075, 0, -h8])
@@ -424,14 +512,15 @@ union() {
         }
         }
 
+        /*
          // chamfer on plug side
-        translate([width/2+boarder_offset, -depth/2, 0]) 
+        translate([width/2+boarder_offset, -depth/2, -20]) 
         rotate([0, -45, 0])
-        cube([2*h8, depth, 2*h8]);
+        cube([100, 100, 100]);
 
         // chamfer on plug side
         mirror([1, 0, 0])
-        translate([width/2+boarder_offset, -depth/2, 0]) 
+        translate([width/2+boarder_offset-10, -depth/2, 0]) 
         rotate([0, -45, 0])
         cube([2*h8, depth, 2*h8]);
 
@@ -444,8 +533,11 @@ union() {
         translate([-width/2, depth/2, h8-6])
         rotate([45, 0, 0])
         cube([width, 2*h8, 2*h8]);
+        */
+        
     }
 
+    /*
     // Mouse ears to help with printing stability
     translate([80, 37, h8-0.2])
     cylinder(d=6, h=0.2);
@@ -455,6 +547,7 @@ union() {
     cylinder(d=6, h=0.2);
     translate([-80, -37, h8-0.2])
     cylinder(d=6, h=0.2);
+    */
 }
 
 // Bottom side, inside bit
