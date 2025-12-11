@@ -9,6 +9,7 @@ output: production-files
 # - Make release files (gerber, BOM, placement file)
 pcbs:
 - id: solar-BQ25798
+  path: ./
   text_variables:
     - key: TAG
       val: {{.Version}}

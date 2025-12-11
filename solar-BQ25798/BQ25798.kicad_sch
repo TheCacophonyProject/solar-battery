@@ -4321,9 +4321,9 @@
 		(at 241.3 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1c1a3b13-1da1-4849-a182-fe6af5b5e944")
 		(property "Reference" "C1719"
@@ -5195,9 +5195,9 @@
 		(at 72.39 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3e41067e-d78f-4c1c-a7cf-1b16bcebecfd")
 		(property "Reference" "C1708"

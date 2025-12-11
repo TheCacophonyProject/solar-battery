@@ -3790,6 +3790,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C17477"
+			(at 71.12 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4f483fbf-29f9-40a0-8838-b33f44603e6c")
 		)
@@ -4296,6 +4305,15 @@
 			)
 		)
 		(property "LCSC" "C8545"
+			(at 68.58 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C8545"
 			(at 68.58 113.03 0)
 			(effects
 				(font
@@ -5066,6 +5084,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C2128"
+			(at 64.77 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a1a398c9-23f3-4606-8197-126514037bbe")
 		)
@@ -5196,6 +5223,15 @@
 			)
 		)
 		(property "Description" "20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, VQFN-20"
+			(at 156.21 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C507118"
 			(at 156.21 101.6 0)
 			(effects
 				(font
@@ -5805,7 +5841,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C2757850"
+		(property "LCSC Part" "C3012622"
 			(at 76.2 163.83 0)
 			(effects
 				(font

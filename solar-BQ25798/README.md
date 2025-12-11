@@ -16,3 +16,7 @@
     - Select: Remove existing tracks/...
     - Select: Remove Duplicates
 
+
+### Building manufacturing files
+- Install https://gitlab.com/waltzingkea/kicad-tools
+- `make-kicad-prod-files --config ./wk-kicad-tools.yaml --type fab-files --version <set-version>`

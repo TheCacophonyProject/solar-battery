@@ -13078,7 +13078,7 @@
 		(at 207.01 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -13476,6 +13476,15 @@
 			)
 		)
 		(property "LCSC" "C8545"
+			(at 144.78 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C8545"
 			(at 144.78 55.88 0)
 			(effects
 				(font
