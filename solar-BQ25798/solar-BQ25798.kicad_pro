@@ -195,8 +195,6 @@
         0.4,
         0.508,
         0.6,
-        0.762,
-        0.95,
         0.95,
         1.0,
         1.5,
@@ -649,6 +647,12 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey",
+          "name": "Digikey",
           "show": false
         }
       ],
