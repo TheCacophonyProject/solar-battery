@@ -18,8 +18,8 @@ corner_cutout_radius = 11.5;    // For the corner cutouts, this is the radius (n
 // boarder to get the final boarder.
 // An offset is also used to make one end have more space for plugs.
 depth = 85;
-width = 85.5*2+5-1;
-boarder_offset = 3;
+width = 177;
+boarder_offset = 4;
 
 
 
@@ -58,10 +58,7 @@ module boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth,
     }
 }
 
-/*
-!projection()
-boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
-*/
+//!projection() boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
 
 
 module rec_from_points(x1, y1, x2, y2, r=0) {
@@ -95,12 +92,13 @@ module tab_main() {
 
     difference() {
         hull() {
+            extra_width=5;
             translate([-(0)/2, tab_feet_y/2, -1])
             linear_extrude(height=2)
-            rec_from_points(x1 = -bat_to_bat/2-0.5, y1 = -tab_feet_y/2-1, x2 = bat_to_bat/2+0.5, y2 = tab_feet_y/2);
+            rec_from_points(x1 = -bat_to_bat/2-extra_width/2, y1 = -tab_feet_y/2-1, x2 = bat_to_bat/2+extra_width/2, y2 = tab_feet_y/2);
 
             translate([-(0)/2, tab_feet_y/2-1.4, 5])
-            cube([bat_to_bat+1, 0.1, 1], center=true);
+            cube([bat_to_bat+extra_width, 0.01, 1], center=true);
         }
 
         translate([0, -tab_p+39.85, -2])
@@ -112,6 +110,7 @@ module tab_main() {
         cylinder(d=3.3+1.8, h=5);    
     }   
 }
+//!tab_main();
 
 module tab_positive() {
     tab_main();
@@ -131,7 +130,6 @@ module tab_negative() {
         linear_extrude(height = tab_h)
         rec_from_points(-4, -6.5, 4, 7, r=1);
 
-
         translate([5.5, -2.7, -1])
         rotate([0, 1.9, 90])
         rotate_extrude(angle=90)
@@ -143,41 +141,56 @@ module tab_negative() {
         rotate_extrude(angle=90)
         translate([1.5, 0, 0])
         square([1, tab_h]); 
-        
-        //cube([8, 13, tab_h/2], center=true);
-
     }
 }
+//!tab_negative();
 
 module electronics_cutout() {
     translate([0, 0, -1])
     linear_extrude(height = 2)
-    rec_from_points(x1 = -bat_to_bat+5, y1 = -33, x2 = -5, y2 = -15, r=1);
+    rec_from_points(x1 = -bat_to_bat+5, y1 = -33, x2 = -5, y2 = 33, r=1);
     
     hull() {
         translate([0, 0, 1-0.1])
         linear_extrude(height = 0.1)
-        rec_from_points(x1 = -bat_to_bat+5, y1 = -33, x2 = -5, y2 = -15);
+        rec_from_points(x1 = -bat_to_bat+5, y1 = -33, x2 = -5, y2 = 33);
 
-        translate([-bat_to_bat/2, -24, 4])
-        cube([0.01, 18, 0.01], center=true);
-
-        //linear_extrude(height = 5)
-        //rec_from_points(x1 = -bat_to_bat+9.5, y1 = -33, x2 = -9.5, y2 = -15);
+        translate([-bat_to_bat/2, 0, 6])
+        linear_extrude(height = 0.01)
+        rec_from_points(x1 = 0.01, y1 = -33, x2 = -0.01, y2 = 33);
     }
 }
+//!electronics_cutout();
 
-screw_hole_diameter = 2.6;
 screw_head_diameter = 6.2;
 screw_hole_y = 39.85;
 screw_hole_dx = bat_to_bat/2;
-module screw_cutout() {
+
+screw_diameter_clearance = 3.5;
+screw_diameter_pilot = 2.6;
+
+module screw_head_cutout() {
+    a = 6;
+    translate([0, 0, -1])
+    cylinder(d=screw_diameter_clearance, h=h8);
+    
+    translate([0, 0, a-1.5])
+    cylinder(d1=screw_diameter_clearance, d2=screw_head_diameter, h=1.5);
+    hull() {    
+        translate([0, 0, a])
+        cylinder(d=screw_head_diameter, h=h8);
+        
+        translate([0, 10, h8/2+a+5])
+        cube([screw_head_diameter*2, 1, h8], center=true);
+    }
+}
+//!screw_head_cutout();
+
+module screw_head_cutout_flat() {
     a = 5;
     translate([0, 0, -1])
-    cylinder(d=3.5, h=h8);
+    cylinder(d=screw_diameter_clearance, h=h8+1);
     
-    translate([0, 0, a-1])
-    cylinder(d1=3.5, d2=screw_head_diameter, h=1);
     hull() {    
         translate([0, 0, a])
         cylinder(d=screw_head_diameter, h=h8);
@@ -186,6 +199,7 @@ module screw_cutout() {
         cube([screw_head_diameter*2, 1, h8], center=true);
     }
 }
+//!screw_head_cutout_flat();
 
 // A 
 module support_bar(width, length) {
@@ -219,14 +233,15 @@ module support_bar(width, length) {
         }
     }
 }
-
 //!support_bar(20, 100);
 
 bat_d = 18.5;
 bat_h=1;
 tab_n = -35;
 module battery() {
-    bat_c=0.1;
+    render(convexity=2)
+    union() {
+    bat_c=0;
     tab_h=17;
     tab_t=2;
     tab_x=14.2;
@@ -240,7 +255,6 @@ module battery() {
         sphere(r=bat_c);
         cylinder(d=bat_d-bat_c*2,h=tab_p-tab_n-bat_c*2);
     }
-    
 
     // Battery silkscreen cutout
     translate([0, 0, -1])
@@ -251,7 +265,9 @@ module battery() {
     tab_negative();
     translate([0, tab_p, 0])
     tab_positive();
+    }
 }
+//!battery();
 
 // Test cells
 scale([1, -1, 1])
@@ -282,11 +298,11 @@ union() {
         mid_joints = [false, false, true, false, true];
         for (i = [0:count*2-2]) {
             translate([screw_hole_dx*i, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
+            cylinder(d=screw_diameter_pilot, h=40, center=true);
 
             if (mid_joints[i]) {
                 translate([screw_hole_dx*i, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout();
             }
         }
 
@@ -294,11 +310,11 @@ union() {
         scale([1, -1, 1])
         for (i = [0:count*2-2]) {
             translate([screw_hole_dx*i, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
+            cylinder(d=screw_diameter_pilot, h=40, center=true);
 
             if (mid_joints2[i]) {
                 translate([screw_hole_dx*i, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout();
             }
         }
     }
@@ -310,37 +326,43 @@ union() {
     }
 }
 
-
 battery_top_rotations = [0, 0, 1, 1, 1, 0, 0];
 battery_bottom_rotations = [1, 1, 1, 0, 0, 1, 1, 1];
 temp_sensors = [1, 0, 0, 1, 0, 0, 0];
 
 h8 = 19/2+1;
 
-
+// Top side, inside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
-!scale([1, -1, 1])
-translate([0, 0, -h8])
-union() {
-    difference() {
-        // Main body
-        translate([0, 0, 0.01])
-        linear_extrude(height = h8)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+scale([1, -1, 1])
+difference() {
+    // Main body
+    translate([0, 0, 0.01])
+    linear_extrude(height = h8)
+    projection()
+    boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
 
+    difference() {
         translate([0, 0, -1])
         intersection() {
-            translate([50 + 53.075 + bat_to_bat/2+1, 0, 0])
+            boarder2x=2.8;
+            translate([49 + 53.075 + bat_to_bat/2+1, 0, 0])
             cube([100, 200, 30], center=true);
             linear_extrude(height = h8)
             projection()
-            boarder(width_max+4, depth_max+4, corner_cutout+4, corner_cutout_radius+2, depth-4, width-4);
+            boarder(width_max+boarder2x, depth_max+boarder2x, corner_cutout+boarder2x, corner_cutout_radius+boarder2x/2, depth-boarder2x, width-boarder2x);
+        }   
+        c = 10;
+        for (i =[-c/2:c/2]) {
+            translate([0, i*7, 50+h8-2])
+            cube([300, 0.8, 100], center=true);
         }
+    }
 
-        // Battery cutout
-        scale([1, -1, 1])
-        translate([53.075, 0, 0])
+    // Battery cutout
+    scale([1, -1, 1])
+    translate([53.075, 0, 0])
+    difference() {
         for (i = [0:6]) {
             translate([-i*bat_to_bat, 0, 0])
             
@@ -354,135 +376,64 @@ union() {
                 cylinder(r=2, h = 20);
             }
         }
-
-        // Cell protection cutout
-        translate([53.075+bat_to_bat, 0, 0])
-        for (i = [0:7]) {
-            translate([-i*bat_to_bat, 0, 0])
-            electronics_cutout();
-            
-            scale([1, -1, 1])
-            translate([-i*bat_to_bat, 0, 0])
-            electronics_cutout();
-        }
-
-        // Inductor cutout
-        translate([width/2, -6.6, -16/2+h8-1])
-        cube(16, center=true);
-
-        // Fuse cutout
-        translate([78.76, -34.32])
-        cylinder(r=2, h=3);
-
-        ////////////////////////////////////////////////
-        // Bolt cutout
-        mid_joints = [false, false, false, false, false];
-        for (i = [0:13]) {
-            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
-
-            if (i == 0 || i == 13) {
-                translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
-            }
-        }
-
-        mid_joints2 = [true, false, false, false, false];
-        scale([1, -1, 1])
-        for (i = [0:13]) {
-            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
-
-            if (i == 7) {
-                translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
-            }
-        }
+        // This little bit will just make the print a bit more reliable 
+        // though it needs to be removed after the print but is small so easy to do so.
+        translate([bat_to_bat/2, 0, 0])
+        cube([1.6, 100, 0.4], center=true);
     }
 
-    // This is just a thin loop that goes around the edge
-    // This helps with the printability, making the outer edge a full loop.
-    difference() {
-        a = 1;
-        linear_extrude(height = 0.4)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+    
+    // Cell protection cutout
+    translate([53.075+bat_to_bat, 0, 0])
+    for (i = [0:7]) {
+        translate([-i*bat_to_bat, 0, 0])
+        electronics_cutout();
+    }
 
-        translate([0, 0, -0.2])
-        linear_extrude(height = 0.8)
-        projection()
-        boarder(width_max-a, depth_max-a, corner_cutout, corner_cutout_radius, depth-a, width-a);
+    // Bolt cutout
+    for (i = [0:13]) {
+        // Bolt heads
+        if (i == 0 || i == 13) {
+            // Bolt head to screw into other part
+            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+            screw_head_cutout_flat();
+
+            // screw hole to join to other printed part on the other side of the PCB
+            translate([screw_hole_dx*i-72.375, -screw_hole_y, -1])
+            cylinder(h=h8, d=screw_diameter_pilot);
+        }
+        scale([1, -1, 1])
+        if (i == 7) {
+            // Bolt head to screw into other part
+            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+            screw_head_cutout_flat();
+            
+            // screw hole to join to other printed part on the other side of the PCB
+            translate([screw_hole_dx*i-72.375, -screw_hole_y, -1])
+            cylinder(h=h8, d=screw_diameter_pilot);
+        }
+
+        if (i == 2 || i == 11) {
+            translate([screw_hole_dx*i-72.375, -screw_hole_y, 1])
+            cylinder(h=h8, d=screw_diameter_pilot);
+            translate([screw_hole_dx*i-72.375, screw_hole_y, 1])
+            cylinder(h=h8, d=screw_diameter_pilot);
+        }
     }
 }
 
 // Top side, outside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
 scale([1, -1, 1])
+rotate([0, 180, 0])
 union() {
     difference() {
-        // Intersection of the main projection and the other parts
-        intersection() {
-            // Main body
-            linear_extrude(height = h8)
-            projection()
-            boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
-            
-            union() {
-            
-            // Plastic around the cells
-                translate([53.075, 0, h8-(bat_d/2+bat_h)-0.5])
-                for (i = [0:6]) {
-                    translate([-i*bat_to_bat, 0, 0])    
-                    rotate([0, 0, battery_top_rotations[i]*180])
-                    
-                    rotate([90, 0, 0])
-                    cylinder(d=bat_d+2.6, h=tab_p-tab_n+4, center=true);
-
-                    translate([-i*bat_to_bat, 0, 0])
-                    cube([10+3, 16, 100], center=true);
-                }
-                
-                // Bolt cutout
-                for (i = [0:13]) {
-                    //translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                    //cylinder(d=screw_hole_diameter, h=40, center=true);
-
-                    if (i == 2 || i == 11) {
-                        translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                        cylinder(d=10, h=100, center=true);
-                        translate([screw_hole_dx*i-72.375, -screw_hole_y, 0])
-                        cylinder(d=10, h=100, center=true);
-                    }
-                }
-
-                
-                support_bar(16, width_max);
-
-                translate([0, depth_max/2-8, 0])
-                support_bar(12, width_max);
-
-                translate([0, -depth_max/2+8, 0])
-                support_bar(12, width_max);
-                
-            
-                wall_t = 1.5;
-                difference() {
-                    linear_extrude(height = h8)
-                    projection()
-                    boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
-
-                    translate([0, 0, -1])
-                    linear_extrude(height = h8+2)
-                    projection()
-                    boarder(width_max-wall_t*2, depth_max-wall_t*2, corner_cutout, corner_cutout_radius+wall_t, depth-wall_t*2, width-wall_t*2);
-                    
-                }
-
-            }
-            
-        }
+        // Main body
+        linear_extrude(height = h8)
+        projection()
+        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        
         // Battery cutout
-        scale([1, -1, 1])
         translate([53.075, 0, -h8])
         for (i = [0:6]) {
             translate([-i*bat_to_bat, 0, 0])    
@@ -493,72 +444,23 @@ union() {
             cube([10, 40, 100], center=true);
         }
 
-        ////////////////////////////////////////////////
         // Bolt cutout
-        translate([0, 0, 0]) {
         for (i = [0:13]) {
-            //translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            //cylinder(d=screw_hole_diameter, h=40, center=true);
-
             if (i == 2 || i == 11) {
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
-            }
-        }
-
-        scale([1, -1, 1])
-        for (i = [0:13]) {
-            //translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            //cylinder(d=screw_hole_diameter, h=40, center=true);
-
-            if (i == 2 || i == 11) {
+                screw_head_cutout();
+                
+                scale([1, -1, 1])
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout();
             }
         }
-        }
-
-        /*
-         // chamfer on plug side
-        translate([width/2+boarder_offset, -depth/2, -20]) 
-        rotate([0, -45, 0])
-        cube([100, 100, 100]);
-
-        // chamfer on plug side
-        mirror([1, 0, 0])
-        translate([width/2+boarder_offset-10, -depth/2, 0]) 
-        rotate([0, -45, 0])
-        cube([2*h8, depth, 2*h8]);
-
-        // chamfer on long sides
-        translate([-width/2, depth/2, h8-6])
-        rotate([45, 0, 0])
-        cube([width, 2*h8, 2*h8]);
-
-        mirror([0, 1, 0])
-        translate([-width/2, depth/2, h8-6])
-        rotate([45, 0, 0])
-        cube([width, 2*h8, 2*h8]);
-        */
-        
     }
-
-    /*
-    // Mouse ears to help with printing stability
-    translate([80, 37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([80, -37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([-80, 37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([-80, -37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    */
 }
 
 // Bottom side, inside bit
 // Flipping it around as the y axis is reversed in kicad to openscad
-!scale([1, -1, 1])
+scale([1, -1, 1])
 translate([0, 0, -h8])
 union() {
     difference() {
@@ -578,48 +480,64 @@ union() {
             battery();
         }
 
-        ////////////////////////////////////////////////
         // Bolt cutout
-        translate([0, 0, h8]) {
         for (i = [0:13]) {
-            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
-
             if (i == 0 || i == 13) {
+                // screw hole to join to other printed part on the other side of the PCB
+                translate([screw_hole_dx*i-72.375, -screw_hole_y, -1])
+                cylinder(h=h8, d=screw_diameter_pilot);
+
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout_flat();
             }
-        }
-
-        scale([1, -1, 1])
-        for (i = [0:13]) {
-            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(d=screw_hole_diameter, h=40, center=true);
-
+            scale([1, -1, 1])
             if (i == 7) {
+                // screw hole to join to other printed part on the other side of the PCB
+                translate([screw_hole_dx*i-72.375, -screw_hole_y, -1])
+                cylinder(h=h8, d=screw_diameter_pilot);
+
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout_flat();
             }
-        }
+
+            if (i == 2 || i == 11) {
+                translate([screw_hole_dx*i-72.375, -screw_hole_y, 1])
+                cylinder(h=h8, d=screw_diameter_pilot);
+                translate([screw_hole_dx*i-72.375, screw_hole_y, 1])
+                cylinder(h=h8, d=screw_diameter_pilot);
+            }
         }
 
         // Output 1 cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
-        rec_from_points(81, 14.8, 92.2, 27.4, r=0.4); 
+        rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
 
         // Output 2 cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
-        rec_from_points(81, -0.4, 92.2, 12.1, r=0.4); 
+        rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
 
-        // Input
+        // Input cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
-        rec_from_points(81.1, -28.65, 91.9, -19.85, r=0.4); 
+        rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
+
+        // Programmer cutout
+        translate([0, 0, -10])
+        scale([1, -1, 1])
+        linear_extrude(height = 30)
+        rec_from_points(80.6, -17.2, 91.6, -10.2, r=1); 
+
+        // buzzer pin cutout
+        translate([0, 0, -1])
+        scale([1, -1, 1])
+        linear_extrude(height = 4)
+        rec_from_points(76.8, -25.1, 80.2, -17.2, r=1); 
+        
     }
 
     // This is just a thin loop that goes around the edge
@@ -637,11 +555,10 @@ union() {
     }
 }
 
-
-
 // Bottom side, outside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
-scale([1, -1, 1])
+!scale([1, -1, 1])
+rotate([0, 180, 0])
 union() {
     difference() {
         bat_offset = -72.375;
@@ -662,15 +579,11 @@ union() {
             cube([10, 40, 100], center=true);
         }
 
-        ////////////////////////////////////////////////
         // Bolt cutout
         for (i = [0:13]) {
-            //translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            //cylinder(d=screw_hole_diameter, h=40, center=true);
-
             if (i == 2 || i == 11) {
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout();
             }
         }
 
@@ -678,66 +591,40 @@ union() {
         for (i = [0:13]) {
             if (i == 2 || i == 11) {
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_cutout();
+                screw_head_cutout();
             }
         }
 
         // Output 1 cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
-        linear_extrude(height = 40)
-        rec_from_points(81, 14.8, 92.2, 27.4, r=0.4); 
+        linear_extrude(height = 30)
+        rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
 
         // Output 2 cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
-        linear_extrude(height = 40)
-        rec_from_points(81, -0.4, 92.2, 12.1, r=0.4); 
+        linear_extrude(height = 30)
+        rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
 
-        // Input
+        // Input cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
-        linear_extrude(height = 40)
-        rec_from_points(81.1, -28.65, 91.9, -19.85, r=0.4); 
+        linear_extrude(height = 30)
+        rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
 
-        // chamfer on plug side
-        translate([width/2+boarder_offset, -depth/2, 0]) 
-        rotate([0, -45, 0])
-        cube([2*h8, depth, 2*h8]);
-
-        // chamfer on plug side
-        mirror([1, 0, 0])
-        translate([width/2+boarder_offset, -depth/2, 0]) 
-        rotate([0, -45, 0])
-        cube([2*h8, depth, 2*h8]);
-
-        // chamfer on long sides
-        translate([-width/2, depth/2, h8-6])
-        rotate([45, 0, 0])
-        cube([width, 2*h8, 2*h8]);
-
-        mirror([0, 1, 0])
-        translate([-width/2, depth/2, h8-6])
-        rotate([45, 0, 0])
-        cube([width, 2*h8, 2*h8]);
+        // Programmer cutout
+        translate([0, 0, -10])
+        scale([1, -1, 1])
+        linear_extrude(height = 30)
+        rec_from_points(80.6, -17.2, 91.6, -10.2, r=1);
     }
 
-    // Mouse ears to help with printing stability
-    translate([80, 37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([80, -37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([-80, 37, h8-0.2])
-    cylinder(d=6, h=0.2);
-    translate([-80, -37, h8-0.2])
-    cylinder(d=6, h=0.2);
-
-    /*
     // This is just a thin loop that goes around the edge
     // This helps with the printability, making the outer edge a full loop.
-    translate([0, 0, 2*h8-0.4]) 
+    translate([0, 0, h8-0.4])
     difference() {
-        a = 1;
+        a = 1.6;
         linear_extrude(height = 0.4)
         projection()
         boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
@@ -746,8 +633,7 @@ union() {
         linear_extrude(height = 0.8)
         projection()
         boarder(width_max-a, depth_max-a, corner_cutout, corner_cutout_radius, depth-a, width-a);
+
+        cube([180, 200, 200], center=true);
     }
-    */
 }
-
-
