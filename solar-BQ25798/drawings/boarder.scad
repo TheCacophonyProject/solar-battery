@@ -1,4 +1,4 @@
-$fs=0.6;
+$fs=0.4;
 $fa=4;
 
 
@@ -21,45 +21,15 @@ depth = 85;
 width = 177;
 boarder_offset = 4;
 
-
-
 // Distance from one battery cell to another.
 bat_to_bat = 19.3;
 
-
-
-
-
 h = 2;
 
-module boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width) {
-    intersection() {
-        difference() {
-            union() {
-                cube([width_max, depth_max-2*corner_cutout, h], center=true);
-                cube([width_max-2*corner_cutout, depth_max, h], center=true);
-                cube([width_max-2*corner_cutout+2*corner_cutout_radius, depth_max-2*corner_cutout+2*corner_cutout_radius, h], center=true);
-            }
-            
-            translate([(width_max/2+corner_cutout_radius-corner_cutout), (depth_max/2+corner_cutout_radius-corner_cutout), 0])
-            cylinder(r=corner_cutout_radius, h=h+1, center=true);
-            
-            translate([-(width_max/2+corner_cutout_radius-corner_cutout), (depth_max/2+corner_cutout_radius-corner_cutout), 0])
-            cylinder(r=corner_cutout_radius, h=h+1, center=true);
-            
-            translate([(width_max/2+corner_cutout_radius-corner_cutout), -(depth_max/2+corner_cutout_radius-corner_cutout), 0])
-            cylinder(r=corner_cutout_radius, h=h+1, center=true);
-            
-            translate([-(width_max/2+corner_cutout_radius-corner_cutout), -(depth_max/2+corner_cutout_radius-corner_cutout), 0])
-            cylinder(r=corner_cutout_radius, h=h+1, center=true);
-        }
-        translate([boarder_offset, 0, 0])
-        cube([width, depth, h], center=true); 
-    }
+module boarder2(height) {
+    linear_extrude(height = height)
+    import("/home/cam/Downloads/boarder3-Shape2DViewaaaaa.dxf"); 
 }
-
-//!projection() boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
-
 
 module rec_from_points(x1, y1, x2, y2, r=0) {
     if (r == 0) {
@@ -72,7 +42,7 @@ module rec_from_points(x1, y1, x2, y2, r=0) {
     }
 }
 
-tab_h=17;
+tab_h=18;
 tab_y=1.2;
 tab_x=15.3;
 tab_feet_y=4;
@@ -88,6 +58,16 @@ module tab_main() {
         rec_from_points(x1 = -tab_x/2, y1 = -tab_y, x2 = tab_x/2, y2 = tab_y, r=0.4);
         linear_extrude(height = tab_h) 
         rec_from_points(x1 = -tab_x/2, y1 = -tab_y/2, x2 = tab_x/2, y2 = tab_y/2, r=0.4);
+    }
+    hull() {
+        // Wider at the bottom to make putting it on the PCB easier.
+        translate([0, -tab_y, h8])
+        linear_extrude(height = 1) 
+        rec_from_points(x1 = -tab_x/2, y1 = -tab_y/2-2, x2 = tab_x/2, y2 = tab_y, r=0.4);
+        
+        translate([0, 0, tab_h-1])
+        linear_extrude(height = 1) 
+        rec_from_points(x1 = -tab_x/2, y1 = -tab_y/2-1, x2 = tab_x/2, y2 = tab_y/2, r=0.4);
     }
 
     difference() {
@@ -110,7 +90,7 @@ module tab_main() {
         cylinder(d=3.3+1.8, h=5);    
     }   
 }
-//!tab_main();
+// !tab_main();
 
 module tab_positive() {
     tab_main();
@@ -235,7 +215,7 @@ module support_bar(width, length) {
 }
 //!support_bar(20, 100);
 
-bat_d = 18.5;
+bat_d = 18.8;
 bat_h=1;
 tab_n = -35;
 module battery() {
@@ -267,9 +247,10 @@ module battery() {
     tab_positive();
     }
 }
-//!battery();
+// !battery();
 
 // Test cells
+module test_cells()
 scale([1, -1, 1])
 union() {
     count = 2;
@@ -325,6 +306,7 @@ union() {
         cube([bat_to_bat*count-1.6, depth-1.6, 0.6], center=true);
     }
 }
+// test_cells();
 
 battery_top_rotations = [0, 0, 1, 1, 1, 0, 0];
 battery_bottom_rotations = [1, 1, 1, 0, 0, 1, 1, 1];
@@ -334,29 +316,69 @@ h8 = 19/2+1;
 
 // Top side, inside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
+module top_side_inner()
 scale([1, -1, 1])
 difference() {
     // Main body
     translate([0, 0, 0.01])
-    linear_extrude(height = h8)
-    projection()
-    boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+    
+    boarder2(h8);
 
     difference() {
+        
+        // Cutout for electronics
+        boarder2x=2.8;
         translate([0, 0, -1])
-        intersection() {
-            boarder2x=2.8;
-            translate([49 + 53.075 + bat_to_bat/2+1, 0, 0])
-            cube([100, 200, 30], center=true);
-            linear_extrude(height = h8)
+        union() {
+            b=3.5;
+            linear_extrude(height = h8-b)
+            offset(r=-boarder2x/2)
             projection()
-            boarder(width_max+boarder2x, depth_max+boarder2x, corner_cutout+boarder2x, corner_cutout_radius+boarder2x/2, depth-boarder2x, width-boarder2x);
-        }   
+            intersection() {
+                boarder2(1);
+                translate([49 + 53.075 + bat_to_bat/2+1, 0, 0])
+                cube([100+boarder2x, 200, 30], center=true);
+            }
+
+            x=75;
+            a = 1;
+            translate([x, 0, h8-b])
+            linear_extrude(height = b-a, scale=[0.8, 0.9])
+            translate([-x, 0, 0])
+            offset(r=-boarder2x/2)
+            projection()
+            intersection() {
+                boarder2(1);
+                translate([49 + 53.075 + bat_to_bat/2+1, 0, 0])
+                cube([100+boarder2x, 200, 30], center=true);
+            }
+
+            translate([x, 0, h8-a])
+            linear_extrude(height = a) 
+            scale([0.8, 0.9])
+            translate([-x, 0, 0])
+            offset(r=-boarder2x/2)
+            projection()
+            intersection() {
+                boarder2(1);
+                translate([49 + 53.075 + bat_to_bat/2+1, 0, 0])
+                cube([100+boarder2x, 200, 30], center=true);
+            }
+        }
+           
         c = 10;
         for (i =[-c/2:c/2]) {
-            translate([0, i*7, 50+h8-2])
+            translate([0, i*7, 50+h8-1.6])
             cube([300, 0.8, 100], center=true);
         }
+
+        translate([78.53, -21.23, 0])
+        cylinder(d=11, h=h8+1); 
+        translate([78.53, -21.23, 0])
+        cylinder(d1=13, d2=11, h=2);
+        translate([0, 0, h8-2])
+        translate([78.53, -21.23, 0])
+        cylinder(d1=11, d2=13, h=2); 
     }
 
     // Battery cutout
@@ -420,46 +442,64 @@ difference() {
             cylinder(h=h8, d=screw_diameter_pilot);
         }
     }
+
+    // Buzzer horn hole
+    translate([78.53, -21.23, 0])
+    cylinder(d=10, h=h8+1);  
+
 }
+// top_side_inner();
 
 // Top side, outside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
+module top_side_outer()
 scale([1, -1, 1])
 rotate([0, 180, 0])
-union() {
-    difference() {
-        // Main body
-        linear_extrude(height = h8)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+difference() {
+    // Main body
+    union() {
+        boarder2(height = h8-2);
+        translate([0, 0, h8-2])
+        linear_extrude(height = 2, scale=[0.98, 0.95])
         
-        // Battery cutout
-        translate([53.075, 0, -h8])
-        for (i = [0:6]) {
-            translate([-i*bat_to_bat, 0, 0])    
-            rotate([0, 0, battery_top_rotations[i]*180])
-            battery();
+        projection()
+        boarder2(height=1);
+    }
+    
 
-            translate([-i*bat_to_bat, 0, 0])
-            cube([10, 40, 100], center=true);
-        }
+    // Battery cutout
+    translate([53.075, 0, -h8])
+    for (i = [0:6]) {
+        translate([-i*bat_to_bat, 0, 0])    
+        rotate([0, 0, battery_top_rotations[i]*180])
+        battery();
 
-        // Bolt cutout
-        for (i = [0:13]) {
-            if (i == 2 || i == 11) {
-                translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_head_cutout();
-                
-                scale([1, -1, 1])
-                translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-                screw_head_cutout();
-            }
+        translate([-i*bat_to_bat, 0, 0])
+        linear_extrude(height = 100) 
+        rec_from_points(x1 = -5, y1 = -20, x2 = 5, y2 = 20, r=1.5);
+    }
+
+    // Bolt cutout
+    for (i = [0:13]) {
+        if (i == 2 || i == 11) {
+            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+            screw_head_cutout();
+            
+            scale([1, -1, 1])
+            translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+            screw_head_cutout();
         }
     }
+
+    // Buzzer horn hole
+    translate([78.53, -21.23, 0])
+    cylinder(d1=10, d2=16, h=h8);
 }
+// top_side_outer();
 
 // Bottom side, inside bit
 // Flipping it around as the y axis is reversed in kicad to openscad
+module bottom_side_inner() 
 scale([1, -1, 1])
 translate([0, 0, -h8])
 union() {
@@ -467,9 +507,7 @@ union() {
         bat_offset = -72.375;
         // Main body
         translate([0, 0, 0.01])
-        linear_extrude(height = h8)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        boarder2(height = h8);
 
         // Battery cutout
         scale([1, -1, 1])
@@ -543,29 +581,44 @@ union() {
     // This is just a thin loop that goes around the edge
     // This helps with the printability, making the outer edge a full loop.
     difference() {
-        a = 1;
-        linear_extrude(height = 0.4)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        boarder2(height=0.6);
 
-        translate([0, 0, -0.2])
-        linear_extrude(height = 0.8)
+        translate([0, 0, -1])
+        linear_extrude(height = 3) 
+        offset(r=-0.5)
         projection()
-        boarder(width_max-a, depth_max-a, corner_cutout, corner_cutout_radius, depth-a, width-a);
+        boarder2(height=1);
+    }
+
+    // This is a thin wall on the back side where the cutout for the battery and components go into the wall
+    difference() {
+        // Main part
+        boarder2(height=h8);
+
+        // Inner cutout
+        translate([0, 0, -1])
+        linear_extrude(height = h8+2) 
+        offset(r=-0.4)
+        projection()
+        boarder2(height=1);
+
+        // Cutout so it is just the back wall part
+        translate([100-78, 0, 0])
+        cube([200, 100, 100], center=true);
     }
 }
+// bottom_side_inner();
 
 // Bottom side, outside bit.
 // Flipping it around as the y axis is reversed in kicad to openscad
-!scale([1, -1, 1])
+module bottom_side_outer()
+scale([1, -1, 1])
 rotate([0, 180, 0])
 union() {
     difference() {
         bat_offset = -72.375;
         // Main body
-        linear_extrude(height = h8)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        boarder2(height = h8);
 
         // Battery cutout
         scale([1, -1, 1])
@@ -583,7 +636,9 @@ union() {
         for (i = [0:13]) {
             if (i == 2 || i == 11) {
                 translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
+                
                 screw_head_cutout();
+                echo(screw_hole_dx*i-72.375);
             }
         }
 
@@ -596,22 +651,45 @@ union() {
         }
 
         // Output 1 cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
+        // translate([0, 0, -10])
+        // scale([1, -1, 1])
+        // linear_extrude(height = 30)
+        // rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
 
         // Output 2 cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
         rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
+        hull() {
+            translate([0, 0, h8])
+            scale([1, -1, 1])
+            linear_extrude(height = 0.01)
+            rec_from_points(83.2-5, 14.8, 93.6, 27.6, r=0.4);
+
+            translate([0, 0, h8-5])
+            scale([1, -1, 1])
+            linear_extrude(height = 5)
+            rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
+        }
+
 
         // Input cutout
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
         rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
+        hull() {
+            translate([0, 0, h8])
+            scale([1, -1, 1])
+            linear_extrude(height = 0.01)
+            rec_from_points(83.3-5, -28.6, 94.3, -19.8, r=0.4); 
+
+            translate([0, 0, h8-5])
+            scale([1, -1, 1])
+            linear_extrude(height = 5)
+            rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
+        }
 
         // Programmer cutout
         translate([0, 0, -10])
@@ -622,18 +700,50 @@ union() {
 
     // This is just a thin loop that goes around the edge
     // This helps with the printability, making the outer edge a full loop.
-    translate([0, 0, h8-0.4])
+    translate([0, 0, h8-0.6])
     difference() {
-        a = 1.6;
-        linear_extrude(height = 0.4)
-        projection()
-        boarder(width_max, depth_max, corner_cutout, corner_cutout_radius, depth, width);
+        boarder2(height=0.6);
 
-        translate([0, 0, -0.2])
-        linear_extrude(height = 0.8)
+        translate([0, 0, -1])
+        linear_extrude(height = 3) 
+        offset(r=-0.5)
         projection()
-        boarder(width_max-a, depth_max-a, corner_cutout, corner_cutout_radius, depth-a, width-a);
+        boarder2(height=1);
+    }
 
-        cube([180, 200, 200], center=true);
+    // This is a thin wall on the back side where the cutout for the battery and components go into the wall
+    difference() {
+        // Main part
+        boarder2(height=h8);
+
+        // Inner cutout
+        translate([0, 0, -1])
+        linear_extrude(height = h8+2) 
+        offset(r=-0.4)
+        projection()
+        boarder2(height=1);
+
+        // Cutout so it is just the back wall part
+        translate([100-78, 0, 0])
+        cube([200, 100, 100], center=true);
     }
 }
+// bottom_side_outer();
+
+module stack() {
+    translate([0, 0, 30])
+    rotate([0, 180, 0])
+    top_side_outer();
+
+    translate([0, 0, 10])
+    top_side_inner();
+
+    translate([0, 0, -10])
+    rotate([180, 0, 0])
+    bottom_side_inner();
+
+    translate([0, 0, -30])
+    rotate([0, 0, 180])
+    bottom_side_outer();    
+}
+//stack();
