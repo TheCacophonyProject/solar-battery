@@ -2428,7 +2428,7 @@
 	)
 	(text_box "This buzzer doesn't have an internal driver so we need to drive it with a PWM frequency around 2-3kHz\n"
 		(exclude_from_sim no)
-		(at 27.94 52.07 0)
+		(at 17.78 87.63 0)
 		(size 36.83 8.89)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke

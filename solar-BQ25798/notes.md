@@ -54,6 +54,13 @@
 
 
 
+9.3.9.5:
+- Set reg in  REG18_NTC_Control_1 for what voltage percentage it will be
+
+
+
+
+
 
 
 9.3.10 ADC:
