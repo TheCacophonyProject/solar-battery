@@ -468,189 +468,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -837,7 +654,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "*NTC* *Thermistor* PIN?ARRAY* bornier* *Terminal?Block* R_*"
+			(property "ki_fp_filters" "R_* RV_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1868,7 +1685,7 @@
 	)
 	(text_box "9.3.4.3 ILIM_HIZ Pin"
 		(exclude_from_sim no)
-		(at 214.63 54.61 0)
+		(at 200.66 53.34 0)
 		(size 25.4 7.62)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2001,7 +1818,7 @@
 		(uuid "36fd64ad-8376-407e-aaa6-e3d80a73a7a1")
 	)
 	(junction
-		(at 127 87.63)
+		(at 115.57 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4921a137-371f-47af-a066-d6ed95869181")
@@ -2037,7 +1854,7 @@
 		(uuid "5d769c1c-d966-464c-ac26-cf508eae3383")
 	)
 	(junction
-		(at 127 99.06)
+		(at 115.57 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f403d71-0ffa-43b4-b985-2670769226e8")
@@ -2053,12 +1870,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "619bbd4f-c649-461c-9dcd-691101b6b5cd")
-	)
-	(junction
-		(at 208.28 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "723dbfd9-eee8-4b7b-b464-30a8dfc4b994")
 	)
 	(junction
 		(at 184.15 66.04)
@@ -2294,7 +2105,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 99.06) (xy 127 99.06)
+			(xy 134.62 99.06) (xy 115.57 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2304,7 +2115,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 101.6) (xy 134.62 101.6)
+			(xy 121.92 101.6) (xy 134.62 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2334,7 +2145,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 85.09) (xy 127 85.09)
+			(xy 116.84 85.09) (xy 115.57 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2364,7 +2175,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 88.9) (xy 124.46 87.63)
+			(xy 113.03 88.9) (xy 113.03 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2394,16 +2205,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 59.69) (xy 208.28 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d06a954-84cc-4f88-905d-3ecf15b855bc")
-	)
-	(wire
-		(pts
 			(xy 121.92 55.88) (xy 121.92 57.15)
 		)
 		(stroke
@@ -2414,7 +2215,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 99.06) (xy 124.46 99.06)
+			(xy 115.57 99.06) (xy 113.03 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2424,7 +2225,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 87.63) (xy 134.62 87.63)
+			(xy 115.57 87.63) (xy 134.62 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2474,7 +2275,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 85.09) (xy 127 87.63)
+			(xy 115.57 85.09) (xy 115.57 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2494,7 +2295,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 99.06) (xy 127 101.6)
+			(xy 115.57 99.06) (xy 115.57 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2504,7 +2305,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 87.63) (xy 127 87.63)
+			(xy 113.03 87.63) (xy 115.57 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2594,7 +2395,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 85.09) (xy 134.62 85.09)
+			(xy 121.92 85.09) (xy 134.62 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2614,7 +2415,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 101.6) (xy 127 101.6)
+			(xy 116.84 101.6) (xy 115.57 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2684,16 +2485,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 50.8) (xy 208.28 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56d6194e-0f3a-4530-badf-508a9924c3d5")
-	)
-	(wire
-		(pts
 			(xy 242.57 44.45) (xy 242.57 45.72)
 		)
 		(stroke
@@ -2714,7 +2505,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 43.18) (xy 193.04 43.18)
+			(xy 198.12 43.18) (xy 199.39 43.18)
 		)
 		(stroke
 			(width 0)
@@ -2764,7 +2555,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 43.18) (xy 184.15 43.18)
+			(xy 182.88 43.18) (xy 190.5 43.18)
 		)
 		(stroke
 			(width 0)
@@ -2941,16 +2732,6 @@
 			(type default)
 		)
 		(uuid "8e933f01-2be8-4797-bd70-21b474f0ef46")
-	)
-	(wire
-		(pts
-			(xy 93.98 114.3) (xy 95.25 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8eb60574-46d9-4498-ba58-8796bc1a063c")
 	)
 	(wire
 		(pts
@@ -3154,7 +2935,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 43.18) (xy 193.04 44.45)
+			(xy 199.39 43.18) (xy 199.39 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3191,16 +2972,6 @@
 			(type default)
 		)
 		(uuid "c0d413df-04be-4055-99dd-333239714f77")
-	)
-	(wire
-		(pts
-			(xy 119.38 114.3) (xy 134.62 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1bf2e72-cad3-49de-bcb7-8ea2df03ae33")
 	)
 	(wire
 		(pts
@@ -3301,16 +3072,6 @@
 			(type default)
 		)
 		(uuid "d69bab60-de19-4193-824d-74a41430c361")
-	)
-	(wire
-		(pts
-			(xy 102.87 114.3) (xy 111.76 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7e44d9a-33c9-4a25-84a5-217b39ed0dac")
 	)
 	(wire
 		(pts
@@ -3574,7 +3335,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 99.06) (xy 124.46 96.52)
+			(xy 113.03 99.06) (xy 113.03 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3603,7 +3364,7 @@
 		(uuid "fd17b305-f42c-4550-a687-9c810bf120a1")
 	)
 	(label "SW2"
-		(at 124.46 99.06 180)
+		(at 113.03 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3612,15 +3373,25 @@
 		)
 		(uuid "06928c8a-399c-4b02-a751-6c50d7b06068")
 	)
-	(label "STAT_PHY"
-		(at 124.46 114.3 0)
+	(label "BTST1"
+		(at 123.19 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "52d4e142-a5c6-42d4-99e2-cc123100a65e")
+		(uuid "39b88283-e3a1-44e2-a274-716e1679d540")
+	)
+	(label "BTST2"
+		(at 123.19 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a1c8958-9aad-4421-9a01-3604c58efeb7")
 	)
 	(label "BATP"
 		(at 184.15 90.17 0)
@@ -3633,7 +3404,7 @@
 		(uuid "8b8ac636-ef41-4af6-a3e0-f60f0dd617c9")
 	)
 	(label "SW1"
-		(at 124.46 87.63 180)
+		(at 113.03 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3652,15 +3423,15 @@
 		)
 		(uuid "a6a46019-7391-436b-bb95-0dbe0393ced9")
 	)
-	(label "STAT"
-		(at 105.41 114.3 0)
+	(label "PROG"
+		(at 184.15 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "cbe975eb-5cf8-416a-b943-d59eba5ccbad")
+		(uuid "f786ad1c-b0a2-47fe-9c0e-4d4de4f85c87")
 	)
 	(global_label "VSYS"
 		(shape input)
@@ -3719,28 +3490,6 @@
 		(uuid "3e1f5d36-b74a-4b19-b256-d8e33d8ffb9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 127.9458 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "REGN"
-		(shape input)
-		(at 93.98 114.3 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5a606941-d30e-47c3-ad4d-74fd0693d56b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.9753 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3927,159 +3676,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 208.28 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04bfe79b-146c-4f70-8d40-efd801a92761")
-		(property "Reference" "#PWR01708"
-			(at 208.28 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 208.28 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "323991f4-a302-4182-bd99-a645c8cb868a")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01708")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 115.57 114.3 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "081ee88a-4ddd-494f-94f7-196452e9956a")
-		(property "Reference" "D1701"
-			(at 117.1575 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 117.1575 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 115.57 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 115.57 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 115.57 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 115.57 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C2286"
-			(at 115.57 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "dcd4f1a5-9359-4d6b-8f0d-f5a6452fb4e5")
-		)
-		(pin "1"
-			(uuid "a17f3689-fd21-4a5b-88b6-92373c763f60")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "D1701")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 224.79 119.38 0)
 		(unit 1)
@@ -4168,7 +3764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18fe2141-924c-43ff-8dc6-fd7339e43610")
-		(property "Reference" "C1714"
+		(property "Reference" "C1718"
 			(at 240.03 68.5862 0)
 			(effects
 				(font
@@ -4231,7 +3827,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1714")
+					(reference "C1718")
 					(unit 1)
 				)
 			)
@@ -4247,7 +3843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "194665c1-50ca-449a-bb07-f5a97163f118")
-		(property "Reference" "C1701"
+		(property "Reference" "C1717"
 			(at 233.68 40.6462 0)
 			(effects
 				(font
@@ -4310,7 +3906,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1701")
+					(reference "C1717")
 					(unit 1)
 				)
 			)
@@ -4396,7 +3992,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ce2b4cc-9294-4ca5-998c-8b2c88daee60")
-		(property "Reference" "#PWR01716"
+		(property "Reference" "#PWR01712"
 			(at 201.93 113.03 0)
 			(effects
 				(font
@@ -4447,7 +4043,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01716")
+					(reference "#PWR01712")
 					(unit 1)
 				)
 			)
@@ -4463,7 +4059,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ebfd1d1-5593-49d1-b0ab-eee6a8d783c2")
-		(property "Reference" "C1707"
+		(property "Reference" "C1705"
 			(at 124.46 52.0762 0)
 			(effects
 				(font
@@ -4526,7 +4122,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1707")
+					(reference "C1705")
 					(unit 1)
 				)
 			)
@@ -4542,7 +4138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fd32b25-9431-4aa4-b3b9-f0d836b5d707")
-		(property "Reference" "C1712"
+		(property "Reference" "C1713"
 			(at 212.09 68.5862 0)
 			(effects
 				(font
@@ -4605,7 +4201,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1712")
+					(reference "C1713")
 					(unit 1)
 				)
 			)
@@ -4621,7 +4217,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22614fe2-d7f2-4a94-b026-7a54c4607832")
-		(property "Reference" "#PWR01718"
+		(property "Reference" "#PWR01708"
 			(at 184.15 137.16 0)
 			(effects
 				(font
@@ -4672,7 +4268,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01718")
+					(reference "#PWR01708")
 					(unit 1)
 				)
 			)
@@ -4680,7 +4276,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 130.81 85.09 90)
+		(at 119.38 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4688,8 +4284,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23674d94-af11-4980-85dc-e6eaf8dcaf35")
-		(property "Reference" "C1718"
-			(at 130.8163 78.74 90)
+		(property "Reference" "C1706"
+			(at 119.3863 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4697,15 +4293,15 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 130.8163 81.28 90)
+			(at 119.3863 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 130.81 85.09 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 119.38 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4714,7 +4310,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 130.81 85.09 0)
+			(at 119.38 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4723,7 +4319,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 130.81 85.09 0)
+			(at 119.38 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4731,8 +4327,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C1622"
-			(at 130.81 85.09 90)
+		(property "LCSC Part" "C307339"
+			(at 119.38 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4749,7 +4345,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1718")
+					(reference "C1706")
 					(unit 1)
 				)
 			)
@@ -4765,7 +4361,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "259ef321-bdd7-45a8-aa58-a90daf70df85")
-		(property "Reference" "C1716"
+		(property "Reference" "C1714"
 			(at 212.09 82.5562 0)
 			(effects
 				(font
@@ -4828,7 +4424,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1716")
+					(reference "C1714")
 					(unit 1)
 				)
 			)
@@ -4844,7 +4440,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f5a722c-1128-4384-aa86-86c51cdd5f61")
-		(property "Reference" "#PWR01706"
+		(property "Reference" "#PWR01703"
 			(at 93.98 64.77 0)
 			(effects
 				(font
@@ -4895,83 +4491,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01706")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 208.28 55.88 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "2f6198a0-f0b6-4503-936f-9bd7d7e1e25e")
-		(property "Reference" "R1704"
-			(at 205.994 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100Ω"
-			(at 210.566 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 210.058 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 208.28 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 208.28 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C25076"
-			(at 208.28 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3f9c2c97-702f-4a6e-8717-9c2aaa40f58f")
-		)
-		(pin "1"
-			(uuid "0f8f43b4-31e9-4d5e-8a67-7b4f8b81c5aa")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1704")
+					(reference "#PWR01703")
 					(unit 1)
 				)
 			)
@@ -4987,7 +4507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30d6d172-8edb-43ba-970a-0a0dde4303a0")
-		(property "Reference" "#PWR01714"
+		(property "Reference" "#PWR01717"
 			(at 241.3 97.79 0)
 			(effects
 				(font
@@ -5038,7 +4558,7 @@
 		(instances
 			(project ""
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01714")
+					(reference "#PWR01717")
 					(unit 1)
 				)
 			)
@@ -5054,7 +4574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34599f98-682c-47d1-81e8-0413cb585f0d")
-		(property "Reference" "C1710"
+		(property "Reference" "C1708"
 			(at 186.69 68.5862 0)
 			(effects
 				(font
@@ -5117,7 +4637,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1710")
+					(reference "C1708")
 					(unit 1)
 				)
 			)
@@ -5133,7 +4653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "352df775-40a6-401b-912e-6e4b46435358")
-		(property "Reference" "#PWR01711"
+		(property "Reference" "#PWR01707"
 			(at 184.15 80.01 0)
 			(effects
 				(font
@@ -5184,7 +4704,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01711")
+					(reference "#PWR01707")
 					(unit 1)
 				)
 			)
@@ -5200,7 +4720,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3e41067e-d78f-4c1c-a7cf-1b16bcebecfd")
-		(property "Reference" "C1708"
+		(property "Reference" "C1702"
 			(at 76.2 52.4509 0)
 			(effects
 				(font
@@ -5254,7 +4774,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1708")
+					(reference "C1702")
 					(unit 1)
 				)
 			)
@@ -5269,7 +4789,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45c8ee84-e6c6-4c68-9e39-883cb9dd953d")
-		(property "Reference" "C1722"
+		(property "Reference" "C1712"
 			(at 195.834 101.854 90)
 			(effects
 				(font
@@ -5332,7 +4852,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1722")
+					(reference "C1712")
 					(unit 1)
 				)
 			)
@@ -5348,7 +4868,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "494301ac-26cf-4dd0-9d70-d7b2d1c23be6")
-		(property "Reference" "#PWR01705"
+		(property "Reference" "#PWR01704"
 			(at 121.92 63.5 0)
 			(effects
 				(font
@@ -5399,7 +4919,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01705")
+					(reference "#PWR01704")
 					(unit 1)
 				)
 			)
@@ -5407,7 +4927,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193.04 44.45 0)
+		(at 199.39 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5415,8 +4935,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b7a8fb3-77b3-4850-ba73-7bd374a6a622")
-		(property "Reference" "#PWR01702"
-			(at 193.04 50.8 0)
+		(property "Reference" "#PWR01710"
+			(at 199.39 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5425,7 +4945,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 193.04 49.53 0)
+			(at 199.39 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5434,7 +4954,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 44.45 0)
+			(at 199.39 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5443,7 +4963,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 44.45 0)
+			(at 199.39 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5452,7 +4972,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 193.04 44.45 0)
+			(at 199.39 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5466,7 +4986,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01702")
+					(reference "#PWR01710")
 					(unit 1)
 				)
 			)
@@ -5482,7 +5002,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d0ef96a-4413-442a-9148-051b4455162b")
-		(property "Reference" "#PWR01719"
+		(property "Reference" "#PWR01709"
 			(at 187.96 137.16 0)
 			(effects
 				(font
@@ -5533,7 +5053,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01719")
+					(reference "#PWR01709")
 					(unit 1)
 				)
 			)
@@ -5549,7 +5069,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ca46c62-bc47-417c-9c58-3b08f0a61510")
-		(property "Reference" "#PWR01709"
+		(property "Reference" "#PWR01701"
 			(at 49.53 73.66 0)
 			(effects
 				(font
@@ -5600,7 +5120,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01709")
+					(reference "#PWR01701")
 					(unit 1)
 				)
 			)
@@ -5616,7 +5136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60388c84-8ef9-4330-97a5-db9773b0bc9d")
-		(property "Reference" "C1705"
+		(property "Reference" "C1703"
 			(at 96.52 52.0762 0)
 			(effects
 				(font
@@ -5679,7 +5199,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1705")
+					(reference "C1703")
 					(unit 1)
 				)
 			)
@@ -5695,7 +5215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60a67e88-6eb3-4883-8370-92cefa8b3540")
-		(property "Reference" "C1703"
+		(property "Reference" "C1722"
 			(at 259.08 40.6462 0)
 			(effects
 				(font
@@ -5758,7 +5278,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1703")
+					(reference "C1722")
 					(unit 1)
 				)
 			)
@@ -5774,7 +5294,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60c4cb24-ab07-42d8-9160-95498f100255")
-		(property "Reference" "C1704"
+		(property "Reference" "C1723"
 			(at 273.05 40.6462 0)
 			(effects
 				(font
@@ -5837,7 +5357,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1704")
+					(reference "C1723")
 					(unit 1)
 				)
 			)
@@ -5931,7 +5451,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "71fb17ad-923d-4408-8d70-defcedf3ce10")
-		(property "Reference" "C1720"
+		(property "Reference" "C1710"
 			(at 196.85 92.7035 0)
 			(effects
 				(font
@@ -5949,7 +5469,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 194.31 93.98 0)
 			(effects
 				(font
@@ -5976,7 +5496,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C1622"
+		(property "LCSC Part" "C307339"
 			(at 194.31 93.98 0)
 			(effects
 				(font
@@ -5994,7 +5514,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1720")
+					(reference "C1710")
 					(unit 1)
 				)
 			)
@@ -6010,7 +5530,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76ac4378-cc1c-4314-a01a-58dfb84a346c")
-		(property "Reference" "R1703"
+		(property "Reference" "R1701"
 			(at 52.07 54.6099 0)
 			(effects
 				(font
@@ -6073,7 +5593,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1703")
+					(reference "R1701")
 					(unit 1)
 				)
 			)
@@ -6089,7 +5609,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78af29e2-e556-48c3-b423-06a0caa75b24")
-		(property "Reference" "#PWR01707"
+		(property "Reference" "#PWR01702"
 			(at 72.39 66.04 0)
 			(effects
 				(font
@@ -6140,7 +5660,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01707")
+					(reference "#PWR01702")
 					(unit 1)
 				)
 			)
@@ -6156,7 +5676,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88d68e2d-5507-4edd-b40e-29fac9e24d56")
-		(property "Reference" "#PWR01710"
+		(property "Reference" "#PWR01705"
 			(at 128.27 73.66 0)
 			(effects
 				(font
@@ -6207,7 +5727,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01710")
+					(reference "#PWR01705")
 					(unit 1)
 				)
 			)
@@ -6215,15 +5735,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 187.96 43.18 90)
+		(at 194.31 43.18 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8caad3dd-487c-4372-9446-f39b9753a384")
-		(property "Reference" "R1701"
-			(at 187.96 40.894 90)
+		(property "Reference" "R1703"
+			(at 194.31 40.894 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6231,7 +5751,7 @@
 			)
 		)
 		(property "Value" "13.7k"
-			(at 187.96 45.466 90)
+			(at 194.31 45.466 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6239,7 +5759,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 187.96 44.958 90)
+			(at 194.31 44.958 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6248,7 +5768,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 43.18 0)
+			(at 194.31 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6257,7 +5777,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 187.96 43.18 0)
+			(at 194.31 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6266,7 +5786,7 @@
 			)
 		)
 		(property "LCSC Part" "C25854"
-			(at 187.96 43.18 90)
+			(at 194.31 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6283,7 +5803,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1701")
+					(reference "R1703")
 					(unit 1)
 				)
 			)
@@ -6299,7 +5819,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90f0ee93-ca1b-45b1-88a7-0b5eadfd1545")
-		(property "Reference" "#PWR01701"
+		(property "Reference" "#PWR01706"
 			(at 132.08 48.26 0)
 			(effects
 				(font
@@ -6350,7 +5870,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01701")
+					(reference "#PWR01706")
 					(unit 1)
 				)
 			)
@@ -6366,7 +5886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "915b8c4e-cc55-433f-aa81-d0e93785d215")
-		(property "Reference" "C1702"
+		(property "Reference" "C1720"
 			(at 245.11 40.6462 0)
 			(effects
 				(font
@@ -6429,7 +5949,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1702")
+					(reference "C1720")
 					(unit 1)
 				)
 			)
@@ -6445,7 +5965,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "935a7de5-288e-4142-b032-27c604a01dcb")
-		(property "Reference" "#PWR01704"
+		(property "Reference" "#PWR01718"
 			(at 242.57 53.34 0)
 			(effects
 				(font
@@ -6496,7 +6016,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01704")
+					(reference "#PWR01718")
 					(unit 1)
 				)
 			)
@@ -6512,7 +6032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94479f90-b3e4-4b94-acea-5a557689be9f")
-		(property "Reference" "#PWR01717"
+		(property "Reference" "#PWR01715"
 			(at 217.17 130.81 0)
 			(effects
 				(font
@@ -6563,7 +6083,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01717")
+					(reference "#PWR01715")
 					(unit 1)
 				)
 			)
@@ -6579,7 +6099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1dd8e7c-b2bc-4020-b634-f3cda799ae77")
-		(property "Reference" "#PWR01715"
+		(property "Reference" "#PWR01711"
 			(at 194.31 104.14 0)
 			(effects
 				(font
@@ -6630,7 +6150,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01715")
+					(reference "#PWR01711")
 					(unit 1)
 				)
 			)
@@ -6646,7 +6166,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a32c374c-dfa8-4276-9901-99c28d5fa2ae")
-		(property "Reference" "R1706"
+		(property "Reference" "R1707"
 			(at 219.71 107.9499 0)
 			(effects
 				(font
@@ -6709,7 +6229,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1706")
+					(reference "R1707")
 					(unit 1)
 				)
 			)
@@ -6717,15 +6237,15 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 130.81 101.6 90)
+		(at 119.38 101.6 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "a42560ab-4dce-448d-9d3f-b440d4644c91")
-		(property "Reference" "C1721"
-			(at 130.81 104.648 90)
+		(property "Reference" "C1707"
+			(at 119.38 104.648 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6733,15 +6253,15 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 130.81 107.188 90)
+			(at 119.38 107.188 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 130.81 101.6 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 119.38 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6750,7 +6270,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 130.81 101.6 0)
+			(at 119.38 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6759,7 +6279,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 130.81 101.6 0)
+			(at 119.38 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6767,8 +6287,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C1622"
-			(at 130.81 101.6 90)
+		(property "LCSC Part" "C307339"
+			(at 119.38 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6785,7 +6305,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1721")
+					(reference "C1707")
 					(unit 1)
 				)
 			)
@@ -6801,7 +6321,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7c2b86e-352a-41ff-b0d6-9a2eec7ac7de")
-		(property "Reference" "C1715"
+		(property "Reference" "C1721"
 			(at 254 68.5862 0)
 			(effects
 				(font
@@ -6864,7 +6384,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1715")
+					(reference "C1721")
 					(unit 1)
 				)
 			)
@@ -6880,7 +6400,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b0da6429-ee51-42ce-ae48-87550f2ec21a")
-		(property "Reference" "C1713"
+		(property "Reference" "C1715"
 			(at 226.06 68.5862 0)
 			(effects
 				(font
@@ -6943,7 +6463,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1713")
+					(reference "C1715")
 					(unit 1)
 				)
 			)
@@ -7253,7 +6773,7 @@
 	)
 	(symbol
 		(lib_id "Device:L")
-		(at 124.46 92.71 180)
+		(at 113.03 92.71 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7261,7 +6781,7 @@
 		(dnp no)
 		(uuid "b62ec86b-9503-406e-ae2b-2524e3d976d7")
 		(property "Reference" "L1701"
-			(at 122.428 93.98 0)
+			(at 110.998 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7270,7 +6790,7 @@
 			)
 		)
 		(property "Value" "10uH"
-			(at 122.428 91.44 0)
+			(at 110.998 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7278,8 +6798,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_TDK_SLF10165"
-			(at 124.46 92.71 0)
+		(property "Footprint" "Inductor_SMD:L_12x12mm_H8mm"
+			(at 113.03 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7288,7 +6808,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 124.46 92.71 0)
+			(at 113.03 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7297,7 +6817,7 @@
 			)
 		)
 		(property "Description" "Inductor"
-			(at 124.46 92.71 0)
+			(at 113.03 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7305,8 +6825,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C2991822"
-			(at 124.46 92.71 0)
+		(property "LCSC Part" "C167261"
+			(at 113.03 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7339,7 +6859,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b790e05c-afce-4b46-8797-41cb1a8423d4")
-		(property "Reference" "C1706"
+		(property "Reference" "C1704"
 			(at 110.49 52.0762 0)
 			(effects
 				(font
@@ -7402,7 +6922,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1706")
+					(reference "C1704")
 					(unit 1)
 				)
 			)
@@ -7418,7 +6938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c33a39c5-7cf6-4e78-991a-0f8f0e2b8836")
-		(property "Reference" "#PWR01713"
+		(property "Reference" "#PWR01714"
 			(at 209.55 95.25 0)
 			(effects
 				(font
@@ -7469,7 +6989,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01713")
+					(reference "#PWR01714")
 					(unit 1)
 				)
 			)
@@ -7485,7 +7005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8a814b9-0299-467d-b54e-83df77ad5981")
-		(property "Reference" "#PWR01712"
+		(property "Reference" "#PWR01719"
 			(at 251.46 81.28 0)
 			(effects
 				(font
@@ -7536,7 +7056,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01712")
+					(reference "#PWR01719")
 					(unit 1)
 				)
 			)
@@ -7552,7 +7072,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c97d36a4-4007-443b-8741-baf22027810c")
-		(property "Reference" "C1709"
+		(property "Reference" "C1701"
 			(at 52.07 62.2235 0)
 			(effects
 				(font
@@ -7615,7 +7135,72 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1709")
+					(reference "C1701")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cacophony-library:TestPoint")
+		(at 134.62 114.3 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9dc4bc3-f16e-46bd-ba2c-d68b8b9834f0")
+		(property "Reference" "TP1702"
+			(at 126.238 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 131.318 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cacophony-library:TP_PAD"
+			(at 134.62 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 134.62 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5be65f43-a228-4fb6-ab4e-d2d1f250bfb9")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
+					(reference "TP1702")
 					(unit 1)
 				)
 			)
@@ -7631,7 +7216,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d03de33f-eb7f-433f-9bf4-265a0a3746c2")
-		(property "Reference" "R1705"
+		(property "Reference" "R1704"
 			(at 196.85 83.8199 0)
 			(effects
 				(font
@@ -7694,7 +7279,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1705")
+					(reference "R1704")
 					(unit 1)
 				)
 			)
@@ -7710,7 +7295,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d9e83268-01b5-43a4-950e-530b4b2c36f7")
-		(property "Reference" "C1717"
+		(property "Reference" "C1716"
 			(at 226.06 82.5562 0)
 			(effects
 				(font
@@ -7773,7 +7358,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1717")
+					(reference "C1716")
 					(unit 1)
 				)
 			)
@@ -7788,7 +7373,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "df062a85-f763-46bb-9e1d-5ac80c7a2584")
-		(property "Reference" "C1723"
+		(property "Reference" "C1709"
 			(at 189.738 125.73 0)
 			(effects
 				(font
@@ -7851,84 +7436,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1723")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 99.06 114.3 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "df34583a-17f6-4aa9-9362-ada9e437d45b")
-		(property "Reference" "R1707"
-			(at 99.06 107.95 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 99.06 110.49 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 99.06 116.078 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 99.06 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 99.06 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C25744"
-			(at 99.06 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6d7a8562-676c-406b-b8c0-f87a5545c94d")
-		)
-		(pin "2"
-			(uuid "b717ad1b-4d81-4e68-b61c-b17908642ca4")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1707")
+					(reference "C1709")
 					(unit 1)
 				)
 			)
@@ -7944,7 +7452,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ebd85082-d2aa-4db2-ae08-1d6edeab7037")
-		(property "Reference" "#PWR01703"
+		(property "Reference" "#PWR01716"
 			(at 231.14 52.07 0)
 			(effects
 				(font
@@ -7995,7 +7503,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01703")
+					(reference "#PWR01716")
 					(unit 1)
 				)
 			)
@@ -8010,7 +7518,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef7e2b41-3165-40a7-900b-533497c5fc38")
-		(property "Reference" "R1702"
+		(property "Reference" "R1705"
 			(at 205.994 45.72 90)
 			(effects
 				(font
@@ -8071,7 +7579,7 @@
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "R1702")
+					(reference "R1705")
 					(unit 1)
 				)
 			)

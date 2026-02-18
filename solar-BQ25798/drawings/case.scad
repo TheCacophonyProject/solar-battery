@@ -58,7 +58,7 @@ tab_p = 35;
 // boarder is a function to make the boarder with given height using a dxf file.
 module boarder(height) {
     linear_extrude(height = height)
-    import("/home/cam/Downloads/boarder3-Shape2DViewaaaaa.dxf"); 
+    import("solar-battery-boarder-case.dxf"); 
 }
 
 // Helper module to make a rectangle from 2 x and 2 y points with options rounded corners.
@@ -248,6 +248,11 @@ module battery() {
     translate([0, tab_p, 0])
     tab_positive();
     }
+
+    // Top hole
+    translate([0, 0, 10])
+    linear_extrude(height = 20) 
+    rec_from_points(x1 = -5, y1 = -20, x2 = 5, y2 = 20, r=1.5);
 }
 // !battery();
 
@@ -458,7 +463,7 @@ scale([1, -1, 1]) difference() {
     cylinder(d=10, h=h8+1);  
 
 }
-// top_side_inner();
+top_side_inner();
 
 module top_side_inner_solid_infill() {
     // Bolt cutout
@@ -503,7 +508,7 @@ scale([1, -1, 1]) rotate([0, 180, 0]) difference() {
         
         intersection() {
             translate([0, 0, h8-2])
-            linear_extrude(height = 2, scale=[1, 0.95])
+            linear_extrude(height = 2, scale=[1, 0.97])
             projection()
             boarder(height=1);
 
@@ -512,7 +517,7 @@ scale([1, -1, 1]) rotate([0, 180, 0]) difference() {
 
         difference() {
             translate([0, 0, h8-2])
-            linear_extrude(height = 2, scale=[0.98, 0.95])
+            linear_extrude(height = 2, scale=[0.99, 0.97])
             projection()
             boarder(height=1);
             
@@ -527,10 +532,6 @@ scale([1, -1, 1]) rotate([0, 180, 0]) difference() {
         translate([-i*bat_to_bat, 0, 0])    
         rotate([0, 0, battery_top_rotations[i]*180])
         battery();
-
-        translate([-i*bat_to_bat, 0, 0])
-        linear_extrude(height = 100) 
-        rec_from_points(x1 = -5, y1 = -20, x2 = 5, y2 = 20, r=1.5);
     }
 
     // Bolt cutout
@@ -689,28 +690,31 @@ module bottom_side_inner_solid_infill() {
         if (i == 0 || i == 13) {
             // screw hole to join to other printed part on the other side of the PCB
             translate([screw_hole_dx*i-72.375, -screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
 
             translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
         }
         scale([1, -1, 1])
         if (i == 7) {
             // screw hole to join to other printed part on the other side of the PCB
             translate([screw_hole_dx*i-72.375, -screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
 
             translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
         }
 
         if (i == 2 || i == 11) {
             translate([screw_hole_dx*i-72.375, -screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
             translate([screw_hole_dx*i-72.375, screw_hole_y, 0])
-            cylinder(h=h, d=d, center=true);
+            cylinder(h=60, d=solid_infill_diameter, center=true);
         }
     }
+
+    translate([plug_screw_x, 0, 0])
+    cylinder(h=60, d=solid_infill_diameter, center=true);
 }
 // bottom_side_inner_solid_infill();
 
@@ -729,10 +733,6 @@ scale([1, -1, 1]) rotate([0, 180, 0]) union() {
             translate([i*bat_to_bat, 0, 0])
             rotate([0, 0, battery_bottom_rotations[i]*180])
             battery();
-
-            translate([i*bat_to_bat, 0, 0])
-            linear_extrude(height = 100) 
-            rec_from_points(x1 = -5, y1 = -20, x2 = 5, y2 = 20, r=1.5);
         }
 
         // Bolt cutout
