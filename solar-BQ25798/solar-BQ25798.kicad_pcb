@@ -54829,7 +54829,7 @@
 				)
 			)
 		)
-		(property "Value" "1mΩ"
+		(property "Value" "5mΩ"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "e464b1e4-a326-404a-a5d3-0c814ba667bc")
@@ -54866,7 +54866,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C7467246"
+		(property "LCSC Part" "C2988648"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")

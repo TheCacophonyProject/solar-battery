@@ -6575,7 +6575,7 @@
 				)
 			)
 		)
-		(property "Value" "1mΩ"
+		(property "Value" "5mΩ"
 			(at 130.81 152.4 90)
 			(effects
 				(font
@@ -6610,7 +6610,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C7467246"
+		(property "LCSC Part" "C2988648"
 			(at 130.81 146.05 90)
 			(effects
 				(font
