@@ -55,6 +55,23 @@ tab_feet_y=4;
 tab_feet_x=4.4;
 tab_p = 35;
 
+// Buzzer
+buzzer_pos_x = 71.4;
+buzzer_pos_y = -30.1;
+buzzer_d = 10;
+
+// Programmer
+programmer_pos_x = 85.61;
+programmer_pos_y = -14.86;
+programmer_len_x = 11;
+programmer_len_y = 7;
+programmer_r = 1;
+
+// Input
+
+// Output
+
+
 // boarder is a function to make the boarder with given height using a dxf file.
 module boarder(height) {
     linear_extrude(height = height)
@@ -71,6 +88,14 @@ module rec_from_points(x1, y1, x2, y2, r=0) {
             circle(r = r);
         }
     }
+}
+
+module rec_from_pos_size(pos_x, pos_y, len_x, len_y, r=0) {
+    x1 = pos_x-len_x/2;
+    x2 = pos_x+len_x/2;
+    y1 = pos_y-len_y/2;
+    y2 = pos_y+len_y/2;
+    rec_from_points(x1 = x1, y1 = y1, x2 = x2, y2 = y2, r=r);
 }
 
 // Main part of the battery tab, used as part to make the positive and negative tab.
@@ -217,7 +242,6 @@ module screw_head_cutout_flat() {
     }
 }
 // !screw_head_cutout_flat();
-
 
 // battery, cutout for the battery. Includes the positive, negative tabs and the silkscreen cutout.
 module battery() {
@@ -372,15 +396,14 @@ scale([1, -1, 1]) difference() {
         }
 
         // Buzzer hole support
+        translate([buzzer_pos_x, buzzer_pos_y, 0])
         union(){
-        translate([78.53, -21.23, 0])
-        cylinder(d=11, h=h8+1); 
-        translate([78.53, -21.23, 0])
-        cylinder(d1=13, d2=11, h=2);
-        translate([78.53, -21.23, h8-2-3])
-        cylinder(d1=11, d2=13, h=2); 
-        translate([78.53, -21.23, h8-3])
-        cylinder(d=13, h=2);
+            cylinder(d=11, h=h8+1);
+            cylinder(d1=13, d2=11, h=2);
+            translate([0, 0, h8-2-3])
+            cylinder(d1=11, d2=13, h=2); 
+            translate([0, 0, h8-3])
+            cylinder(d=13, h=2);
         }
 
         // Support wall, to be removed after print.
@@ -391,8 +414,11 @@ scale([1, -1, 1]) difference() {
                 translate([75+0.5, 0, 0])
                 cube([1, 90, 0.6], center=true);
             }
-            translate([78.53, -21.23, h8-6])
+            translate([buzzer_pos_x, buzzer_pos_y, h8-6])
             cylinder(d=14, h=5);
+
+            translate([buzzer_pos_x, buzzer_pos_y-15, 0])
+            cube([30, 30, 30], center=true);
         }
     }
 
@@ -422,9 +448,14 @@ scale([1, -1, 1]) difference() {
     
     // Cell protection cutout
     translate([53.075+bat_to_bat, 0, 0])
-    for (i = [0:7]) {
-        translate([-i*bat_to_bat, 0, 0])
-        cell_protection_cutout();
+    difference() {
+        for (i = [0:7]) {
+            translate([-i*bat_to_bat, 0, 0])
+            cell_protection_cutout();
+        }
+
+        translate([41, 0, 0])
+        cube([100, 100, 100], center=true);
     }
 
     // Bolt cutout
@@ -459,9 +490,8 @@ scale([1, -1, 1]) difference() {
     }
 
     // Buzzer horn hole
-    translate([78.53, -21.23, 0])
-    cylinder(d=10, h=h8+1);  
-
+    translate([buzzer_pos_x, buzzer_pos_y, 0])
+    cylinder(d=buzzer_d, h=h8+1);  
 }
 top_side_inner();
 
@@ -547,8 +577,8 @@ scale([1, -1, 1]) rotate([0, 180, 0]) difference() {
     }
 
     // Buzzer horn hole
-    translate([78.53, -21.23, 0])
-    cylinder(d1=10, d2=16, h=h8);
+    translate([buzzer_pos_x, buzzer_pos_y, 0])
+    cylinder(d1=buzzer_d, d2=buzzer_d+h8, h=h8+5);
 }
 // top_side_outer();
 
@@ -635,7 +665,7 @@ scale([1, -1, 1]) translate([0, 0, -h8]) union() {
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
-        rec_from_points(80.6, -17.2, 91.6, -10.2, r=1); 
+        rec_from_pos_size(pos_x = programmer_pos_x, pos_y = programmer_pos_y, len_x = programmer_len_x, len_y = programmer_len_y, r=programmer_r);
 
         // buzzer pin cutout
         translate([0, 0, -1])
