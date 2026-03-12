@@ -20,15 +20,16 @@ Using Prusa Slicer these are some of the setting that I use.
 - Horizontal Shell, solid layers: Top 4
 - Horizontal Shell, solid layers: Bottom 2
 
-## Solid Infill
+## Solid Infill Modifier Setup
 
 Each .stl file has a matching .stl modifier file for setting part of the print to 100% infill. This is for better strength around the screws.
 
-To set this up on Prusa Slicer follow these steps, we will use bottom_side_inner.stl for the example:
+To set this up on Prusa Slicer follow these steps, we will use `bottom_side_inner.stl` for the example:
 
-- Import "bottom_side_inner.stl"
+- Import `bottom_side_inner.stl`
 - Right click on the part in the 3D viewer -> `Add modifier` -> `Load ...`
 - Select `bottom_side_inner_solid_infill.stl`
+- You should see multiple cylinders where the screw holes are.
 - In the menu on the right side right click on `bottom_side_inner_solid_infill` -> `Infill`
 - At the bottom you can now set the modifier infill to 100%
 

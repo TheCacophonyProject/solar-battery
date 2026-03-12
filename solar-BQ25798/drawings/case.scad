@@ -1,6 +1,9 @@
 $fs=0.4;
 $fa=4;
 
+// $fa = 8;
+// $fs = 0.8;
+
 output = "";
 
 
@@ -492,8 +495,13 @@ scale([1, -1, 1]) difference() {
     // Buzzer horn hole
     translate([buzzer_pos_x, buzzer_pos_y, 0])
     cylinder(d=buzzer_d, h=h8+1);  
+
+    // Inductor cutout
+    linear_extrude(height = 8) 
+    rec_from_pos_size(pos_x = 84.65, pos_y = -6.25, len_x = 12.7, len_y = 12.7);
 }
-top_side_inner();
+// rotate([0, 180, 0]) translate([0, 0, -10])
+// top_side_inner();
 
 module top_side_inner_solid_infill() {
     // Bolt cutout
@@ -608,12 +616,18 @@ scale([1, -1, 1]) translate([0, 0, -h8]) union() {
 
         // Battery cutout
         scale([1, -1, 1])
-        translate([bat_offset, 0, 0])
-        for (i = [0:7]) {
-            translate([i*bat_to_bat, 0, 0])
-            rotate([0, 0, battery_bottom_rotations[i]*180])
-            battery();
+        difference() {
+            translate([bat_offset, 0, 0])
+            for (i = [0:7]) {
+                translate([i*bat_to_bat, 0, 0])
+                rotate([0, 0, battery_bottom_rotations[i]*180])
+                battery();
+            }
+
+            translate([81, 0, 0])
+            cube([20, 100, 11], center=true);
         }
+        
 
         // Bolt cutout
         for (i = [0:13]) {
@@ -671,7 +685,13 @@ scale([1, -1, 1]) translate([0, 0, -h8]) union() {
         translate([0, 0, -1])
         scale([1, -1, 1])
         linear_extrude(height = 4)
-        rec_from_points(76.8, -25.1, 80.2, -17.2, r=1); 
+        rec_from_pos_size(pos_x = 75.15, pos_y = -30, len_x = 9.7, len_y = 6.8, r=1);
+        
+        // buzzer pin cutout
+        translate([0, 0, -1])
+        scale([1, -1, 1])
+        linear_extrude(height = 4)
+        rec_from_pos_size(pos_x = 75.3, pos_y = -7.15, len_x = 10.3, len_y = 15.1, r=1);
         
         // screw hole for the 
         translate([plug_screw_x, 0, 1])
@@ -826,7 +846,13 @@ scale([1, -1, 1]) rotate([0, 180, 0]) union() {
         translate([0, 0, -10])
         scale([1, -1, 1])
         linear_extrude(height = 30)
-        rec_from_points(80.6, -17.2, 91.6, -10.2, r=1);
+        rec_from_pos_size(
+            pos_x = programmer_pos_x, 
+            pos_y = programmer_pos_y, 
+            len_x = programmer_len_x, 
+            len_y = programmer_len_y, 
+            r = programmer_r
+        );
 
         // Cutout for separate connector cover part
         translate([133, 0, 30])
@@ -863,6 +889,7 @@ scale([1, -1, 1]) rotate([0, 180, 0]) union() {
         cube([200, 100, 100], center=true);
     }
 }
+// rotate([0, 180, 0])
 // bottom_side_outer();
 
 module bottom_side_outer_solid_infill() {
@@ -895,16 +922,37 @@ module plug_cover() scale([1, -1, 1]) rotate([0, 180, 0]) union() {
             translate([0, 0, -h8*(key_length-p)])
             scale([1, -1, 1])
             linear_extrude(height = h8*(1+key_length-p))
-            rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
+            rec_from_pos_size(
+                pos_x = programmer_pos_x, 
+                pos_y = programmer_pos_y, 
+                len_x = programmer_len_x-key_clearance*2, 
+                len_y = programmer_len_y-key_clearance*2,
+                r = programmer_r+key_clearance
+            );
+            // rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
             scale([1, -1, 1])
             hull() {
                 translate([0, 0, -h8*key_length])
                 linear_extrude(height = 0.1)
-                rec_from_points(80.6+1, -17.2+1, 91.6-1, -10.2-1, r=1);
+                rec_from_pos_size(
+                    pos_x = programmer_pos_x, 
+                    pos_y = programmer_pos_y, 
+                    len_x = programmer_len_x-2, 
+                    len_y = programmer_len_y-2,
+                    r = 1
+                );
+                // rec_from_points(80.6+1, -17.2+1, 91.6-1, -10.2-1, r=1);
 
                 translate([0, 0, -h8*(key_length-p)])
                 linear_extrude(height = 0.1)
-                rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
+                rec_from_pos_size(
+                    pos_x = programmer_pos_x, 
+                    pos_y = programmer_pos_y, 
+                    len_x = programmer_len_x-key_clearance*2, 
+                    len_y = programmer_len_y-key_clearance*2,
+                    r = programmer_r+key_clearance
+                );
+                // rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
             }
         }
 
@@ -957,7 +1005,7 @@ module plug_cover_solid_infill() {
     translate([0, 0, 4])
     cylinder(d=screw_head_diameter+2, h=60, center=true);
 }
-// color(c="red", alpha=0.3) plug_cover_solid();
+// color(c="red", alpha=0.3) plug_cover_solid_infill();
 
 module stack() {
     translate([0, 0, 30])
