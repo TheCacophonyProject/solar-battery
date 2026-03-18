@@ -12,3 +12,5 @@ pcbs:
   text_variables:
     - key: TAG
       val: {{.Version}}
+    - key: HASH
+      val: {{.GIT_HASH}}
