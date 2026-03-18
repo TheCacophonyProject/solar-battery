@@ -432,174 +432,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -2396,16 +2228,6 @@
 		)
 		(uuid "5f95f6c2-6f99-41dc-af05-e716c3bb41ff")
 	)
-	(text "C94598"
-		(exclude_from_sim no)
-		(at 90.17 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d9ac8316-9822-49ad-a7d3-4b013353a49a")
-	)
 	(text_box "We will use pins Px2 and Px6 pins for the pins that will have interrupts.\nFrom datashet: All pins can be used for external interrupt, where pins Px2 and Px6 of each port have full asynchronous detection"
 		(exclude_from_sim no)
 		(at 87.63 22.86 0)
@@ -2426,17 +2248,18 @@
 		)
 		(uuid "2ad7aedf-2c21-4bdf-8923-86803aa753bc")
 	)
-	(text_box "This buzzer doesn't have an internal driver so we need to drive it with a PWM frequency around 2-3kHz\n"
+	(text_box "This buzzer doesn't have an internal driver so we need to drive it with a PWM frequency around 2-3kHz\nWe need a bleed resistor to discharge the pizo buzzer, am using 3 10k instead of just one 3.3k as we already use 10k resistors."
 		(exclude_from_sim no)
-		(at 17.78 87.63 0)
-		(size 36.83 8.89)
+		(at 17.78 67.31 0)
+		(size 46.99 13.97)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
 			(type solid)
 		)
 		(fill
-			(type none)
+			(type color)
+			(color 255 229 191 1)
 		)
 		(effects
 			(font
@@ -2445,6 +2268,18 @@
 			(justify left top)
 		)
 		(uuid "40c8da8b-b855-4527-b979-2bdcbda00b41")
+	)
+	(junction
+		(at 64.77 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06b7d93b-a3a7-4bc8-93be-042be43551b6")
+	)
+	(junction
+		(at 57.15 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1eba39a0-80d2-4e9e-9ba6-72a544a95369")
 	)
 	(junction
 		(at 264.16 33.02)
@@ -2465,6 +2300,12 @@
 		(uuid "6ed50cf6-d1a6-4073-b793-6c9fff78bd52")
 	)
 	(junction
+		(at 57.15 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86aeea77-fef4-4168-95a0-6777eabb6355")
+	)
+	(junction
 		(at 71.12 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2475,6 +2316,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2d9bc5f-87fd-4073-99c9-3cd40a968e26")
+	)
+	(junction
+		(at 64.77 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c851971a-6620-4e9f-b00c-203303390310")
 	)
 	(no_connect
 		(at 67.31 161.29)
@@ -2646,6 +2493,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 97.79) (xy 64.77 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56c10644-46e7-4e59-864e-598947113f32")
+	)
+	(wire
+		(pts
 			(xy 171.45 91.44) (xy 180.34 91.44)
 		)
 		(stroke
@@ -2706,6 +2563,26 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 97.79) (xy 57.15 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69312bfa-3fa6-4194-8a19-77568fb0aca6")
+	)
+	(wire
+		(pts
+			(xy 49.53 96.52) (xy 49.53 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73f308c9-0fca-4b93-9458-30d85935a7c8")
+	)
+	(wire
+		(pts
 			(xy 264.16 31.75) (xy 264.16 33.02)
 		)
 		(stroke
@@ -2736,6 +2613,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 87.63) (xy 64.77 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a932d7b-d1fa-4a7e-ad44-67ab4f4bab25")
+	)
+	(wire
+		(pts
 			(xy 264.16 33.02) (xy 264.16 40.64)
 		)
 		(stroke
@@ -2763,6 +2650,16 @@
 			(type default)
 		)
 		(uuid "950ec8f8-3a2c-4ed2-84c9-bb0ce53bf31d")
+	)
+	(wire
+		(pts
+			(xy 49.53 87.63) (xy 57.15 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "960efdff-e85f-44ff-b0b4-56007eee1c58")
 	)
 	(wire
 		(pts
@@ -2956,6 +2853,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 96.52) (xy 57.15 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1c99120-0ee0-4c1c-80e6-cbcec1687036")
+	)
+	(wire
+		(pts
 			(xy 85.09 166.37) (xy 87.63 166.37)
 		)
 		(stroke
@@ -3056,6 +2963,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 87.63) (xy 57.15 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed282c02-f0dd-4aa5-ad1b-5f45cda192d3")
+	)
+	(wire
+		(pts
 			(xy 71.12 106.68) (xy 71.12 107.95)
 		)
 		(stroke
@@ -3093,6 +3010,16 @@
 			(type default)
 		)
 		(uuid "f45b545d-9e1e-4ade-b33e-f83151a7b6bf")
+	)
+	(wire
+		(pts
+			(xy 49.53 88.9) (xy 49.53 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f933c740-8a7e-43e7-83ed-353812da6796")
 	)
 	(wire
 		(pts
@@ -3718,9 +3645,9 @@
 		(at 71.12 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1ad73223-ca49-4193-9524-1e04b1f64db3")
 		(property "Reference" "R1902"
@@ -3741,7 +3668,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "cacophony-library:R_0805_0Ω_Short"
 			(at 69.342 102.87 90)
 			(effects
 				(font
@@ -3760,15 +3687,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 71.12 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C17477"
 			(at 71.12 102.87 0)
 			(effects
 				(font
@@ -4821,6 +4739,82 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 64.77 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a45fe78-7139-4daa-840d-70ace414c454")
+		(property "Reference" "R2"
+			(at 69.088 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 67.056 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 62.992 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C25744"
+			(at 64.77 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "99343790-db96-488d-aa00-4c3080ae7928")
+		)
+		(pin "1"
+			(uuid "3a7309de-fa14-4e11-9165-ea47a43e9b18")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 179.07 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4982,34 +4976,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 64.77 92.71 270)
+		(lib_id "Device:R")
+		(at 57.15 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7951f760-006a-40b3-a22c-c8590215f8ab")
-		(property "Reference" "D1901"
-			(at 57.404 90.932 90)
+		(uuid "81f6708c-2ba6-40b3-9f80-74626ff661f9")
+		(property "Reference" "R3"
+			(at 61.468 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "D"
-			(at 58.674 93.472 90)
+		(property "Value" "10k"
+			(at 59.436 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
-			(at 64.77 92.71 0)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 55.372 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5018,7 +5010,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 64.77 92.71 0)
+			(at 57.15 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5026,8 +5018,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Diode"
-			(at 64.77 92.71 0)
+		(property "Description" "Resistor"
+			(at 57.15 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5035,35 +5027,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 64.77 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 64.77 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2128"
-			(at 64.77 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C2128"
-			(at 64.77 92.71 90)
+		(property "LCSC Part" "C25744"
+			(at 57.15 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5072,15 +5037,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "a1a398c9-23f3-4606-8197-126514037bbe")
+			(uuid "04ca2c41-772e-4c88-8677-a83efc714333")
 		)
 		(pin "1"
-			(uuid "60262e62-b214-4323-a321-fdcb6c2672e4")
+			(uuid "8f4fb841-6ba5-4d2e-9059-766c016ae178")
 		)
 		(instances
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
-					(reference "D1901")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5549,6 +5514,82 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "TP1908")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d65dc257-7c68-439c-bb7f-719e75088a86")
+		(property "Reference" "R4"
+			(at 53.848 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 51.816 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 47.752 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 49.53 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C25744"
+			(at 49.53 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7da5f727-a90f-4dec-b555-051acc481c95")
+		)
+		(pin "1"
+			(uuid "4f6eb0d5-e30c-4b0f-b68f-6743c4e68ae1")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "R4")
 					(unit 1)
 				)
 			)

@@ -534,7 +534,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../Downloads/solar-BQ25798.step",
       "svg": "",
       "vrml": ""
     },
@@ -671,7 +671,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Value"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
