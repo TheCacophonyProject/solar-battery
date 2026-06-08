@@ -55,3 +55,6 @@ kicadpartsplacer*
 /archive/
 
 *.stl
+
+*.history
+
