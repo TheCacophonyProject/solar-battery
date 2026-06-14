@@ -2291,12 +2291,6 @@
 		(uuid "03ca7af3-7553-46b3-81ac-1594886fb1df")
 	)
 	(junction
-		(at 86.36 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0729f5e8-948c-4e29-b5b6-8090d25b50d2")
-	)
-	(junction
 		(at 156.21 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2399,12 +2393,6 @@
 		(uuid "c60cfcce-2758-48f1-9ac4-b9561612c8fe")
 	)
 	(junction
-		(at 149.86 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d1561122-2ee6-4ae1-a251-5d6e82dacfc5")
-	)
-	(junction
 		(at 186.69 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2421,6 +2409,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f61db65c-3238-459e-93ed-61a76523dce9")
+	)
+	(junction
+		(at 149.86 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fbee7eff-32b2-4945-ba94-1edfe1d788d7")
 	)
 	(wire
 		(pts
@@ -2724,16 +2718,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 48.26) (xy 86.36 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a0c5015-f9ac-471e-8064-d4bc0546816b")
-	)
-	(wire
-		(pts
 			(xy 111.76 68.58) (xy 127 68.58)
 		)
 		(stroke
@@ -2764,7 +2748,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 60.96) (xy 104.14 60.96)
+			(xy 96.52 60.96) (xy 104.14 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3284,16 +3268,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 48.26) (xy 86.36 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcd9add2-f293-49e0-8710-130c81e1ef3c")
-	)
-	(wire
-		(pts
 			(xy 134.62 140.97) (xy 133.35 140.97)
 		)
 		(stroke
@@ -3374,7 +3348,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 48.26) (xy 86.36 48.26)
+			(xy 148.59 48.26) (xy 149.86 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3702,9 +3676,33 @@
 			)
 		)
 	)
+	(global_label "CELL_3_POSITIVE"
+		(shape input)
+		(at 96.52 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bcbfc75f-1f56-451e-92a4-dcf772e51528")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 77.6901 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "PACK_+"
 		(shape input)
-		(at 85.09 48.26 180)
+		(at 148.59 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3714,7 +3712,7 @@
 		)
 		(uuid "cc5858f1-a456-4b26-98bf-82b340fe4298")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.6662 48.26 0)
+			(at 138.1662 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7265,7 +7263,7 @@
 				)
 			)
 		)
-		(property "Value" "5mΩ"
+		(property "Value" "15mΩ"
 			(at 130.81 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7308,7 +7306,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2988648"
+		(property "LCSC Part" "C875667"
 			(at 130.81 146.05 90)
 			(hide yes)
 			(show_name no)
