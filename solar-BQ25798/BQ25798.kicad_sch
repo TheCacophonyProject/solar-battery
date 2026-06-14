@@ -7386,7 +7386,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "b6292930-9eb5-45c7-896a-6130e8fe1a7c")
 		(property "Reference" "TP1701"
@@ -7899,7 +7899,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "c9dc4bc3-f16e-46bd-ba2c-d68b8b9834f0")
 		(property "Reference" "TP1702"
