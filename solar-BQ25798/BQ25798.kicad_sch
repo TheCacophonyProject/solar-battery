@@ -4030,7 +4030,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 50V"
 			(at 233.68 43.1862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4284,7 +4284,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 50V"
 			(at 124.46 54.6162 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4891,7 +4891,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 50V"
 			(at 186.69 71.1262 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8187,7 +8187,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 187.96 127 0)
 			(hide yes)
 			(show_name no)
@@ -8220,7 +8220,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C19666"
+		(property "LCSC Part" "C23733"
 			(at 187.96 127 0)
 			(hide yes)
 			(show_name no)

@@ -709,12 +709,12 @@
           "show": false
         }
       ],
-      "filter_string": "",
+      "filter_string": "R",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Value"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -765,7 +765,7 @@
         "uuid": "822b745e-d66e-4222-a6d2-360780548724"
       }
     ],
-    "used_designators": "R1",
+    "used_designators": "#PWR1913-1914,C1814-1815,JP1,R1",
     "variants": []
   },
   "sheets": [
