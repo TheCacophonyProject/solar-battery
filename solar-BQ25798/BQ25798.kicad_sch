@@ -6017,7 +6017,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2Ω"
+		(property "Value" "2.2Ω"
 			(at 52.07 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6061,7 +6061,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C17606"
+		(property "LCSC Part" "C17521"
 			(at 49.53 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6811,7 +6811,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C477765"
+		(property "LCSC Part" "C5948099"
 			(at 217.17 109.22 0)
 			(hide yes)
 			(show_name no)
