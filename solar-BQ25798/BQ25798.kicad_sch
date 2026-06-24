@@ -1948,12 +1948,6 @@
 		(uuid "4921a137-371f-47af-a066-d6ed95869181")
 	)
 	(junction
-		(at 72.39 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "50f2fdd5-c1a4-4603-88b9-4b4c83f537fa")
-	)
-	(junction
 		(at 209.55 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2129,23 +2123,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 49.53) (xy 72.39 49.53)
+			(xy 49.53 49.53) (xy 93.98 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "06eb5487-7b98-4ec2-a6fe-2ab5c81fc954")
-	)
-	(wire
-		(pts
-			(xy 72.39 49.53) (xy 72.39 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "074b7ccb-e6b8-4959-8fd4-80fe182acb9c")
 	)
 	(wire
 		(pts
@@ -2909,16 +2893,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 49.53) (xy 93.98 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e169d96-ec64-4db9-b69f-1b8ea9c3a5fd")
-	)
-	(wire
-		(pts
 			(xy 133.35 74.93) (xy 134.62 74.93)
 		)
 		(stroke
@@ -3296,16 +3270,6 @@
 			(type default)
 		)
 		(uuid "e43cd8d5-6fd8-4a5c-943f-f8eda5483258")
-	)
-	(wire
-		(pts
-			(xy 72.39 58.42) (xy 72.39 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4cffdca-5008-4153-8fce-0392c48d1e07")
 	)
 	(wire
 		(pts
@@ -5041,88 +5005,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 72.39 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "3e41067e-d78f-4c1c-a7cf-1b16bcebecfd")
-		(property "Reference" "C1702"
-			(at 76.2 52.4509 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100uF 50V"
-			(at 76.2 54.9909 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 73.3552 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 72.39 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 72.39 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "72d420f4-f8b5-417c-ba42-e038eb2eab43")
-		)
-		(pin "1"
-			(uuid "8960c5de-0159-4112-a79a-d32d89b84177")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1702")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 198.12 105.41 270)
 		(unit 1)
@@ -6082,85 +5964,6 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
 					(reference "R1701")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 72.39 59.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78af29e2-e556-48c3-b423-06a0caa75b24")
-		(property "Reference" "#PWR01702"
-			(at 72.39 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 72.39 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 72.39 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 72.39 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0daafd66-6e04-447e-8de6-c0388aabb45d")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01702")
 					(unit 1)
 				)
 			)

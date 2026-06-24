@@ -3003,6 +3003,12 @@
 		(color 0 0 0 0)
 		(uuid "c851971a-6620-4e9f-b00c-203303390310")
 	)
+	(junction
+		(at 210.82 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd006261-6887-4eee-a9ef-df237e189d1c")
+	)
 	(no_connect
 		(at 67.31 161.29)
 		(uuid "02730e95-5b07-4209-919a-717d6637e70b")
@@ -3082,6 +3088,16 @@
 			(type default)
 		)
 		(uuid "12de24e0-218b-4645-bb06-8aff7a5a6640")
+	)
+	(wire
+		(pts
+			(xy 210.82 92.71) (xy 210.82 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13904410-ce93-45fa-98e5-2e020dda450a")
 	)
 	(wire
 		(pts
@@ -3485,7 +3501,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 86.36) (xy 180.34 86.36)
+			(xy 171.45 86.36) (xy 201.93 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3512,6 +3528,16 @@
 			(type default)
 		)
 		(uuid "9d124c45-a6b1-4261-9778-8e7403669c1b")
+	)
+	(wire
+		(pts
+			(xy 209.55 86.36) (xy 210.82 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6d0706-6114-4d77-89de-741f17e502be")
 	)
 	(wire
 		(pts
@@ -3652,6 +3678,16 @@
 			(type default)
 		)
 		(uuid "cd0be320-368a-49ce-a467-4a28a4e54ca3")
+	)
+	(wire
+		(pts
+			(xy 210.82 86.36) (xy 210.82 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdbfe3c0-a8ab-49d2-86c7-058fdacd4fa7")
 	)
 	(wire
 		(pts
@@ -3865,6 +3901,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 86.36) (xy 220.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4b0060e-8cda-4259-8ad1-d0e584da4424")
+	)
+	(wire
+		(pts
 			(xy 48.26 163.83) (xy 48.26 166.37)
 		)
 		(stroke
@@ -3963,6 +4009,30 @@
 		)
 		(uuid "b08ac7e2-0799-4ba8-8135-7354ad5e97cd")
 	)
+	(global_label "EN_HEATER"
+		(shape input)
+		(at 139.7 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "05837a87-6d8b-4e18-967c-fb156a83a07b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.313 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 190.5 59.69 0)
@@ -4032,6 +4102,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "T_SW_SENSE"
+		(shape input)
+		(at 220.98 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "27a4813e-20af-4b03-9169-1892e379dcf5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 235.5764 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -5004,7 +5098,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp yes)
@@ -5495,6 +5589,99 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "BUZZER1901")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 210.82 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "341e146b-fce3-4a02-8710-dd88fbc7d425")
+		(property "Reference" "C1816"
+			(at 213.36 88.9062 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470pF"
+			(at 213.36 91.4462 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 210.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 210.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1537"
+			(at 210.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "337d5331-9ca2-4ac5-8ec6-8af8be3aefce")
+		)
+		(pin "2"
+			(uuid "1cfe57a7-491e-4ba7-8d7a-76fa05893057")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "C1816")
 					(unit 1)
 				)
 			)
@@ -6203,6 +6390,96 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "#PWR01904")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 205.74 86.36 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "689ea82e-03a2-4ebe-a359-5f10beb805d6")
+		(property "Reference" "R1908"
+			(at 205.74 82.296 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100Ω"
+			(at 205.74 84.328 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 205.74 88.138 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25076"
+			(at 205.74 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ed3f8687-0bef-4d28-94f5-cd47be3b162b")
+		)
+		(pin "1"
+			(uuid "2de7e4ac-d97e-4840-83b8-cf59967cfb4c")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "R1908")
 					(unit 1)
 				)
 			)
@@ -7199,83 +7476,6 @@
 		)
 	)
 	(symbol
-		(lib_id "cacophony-library:TestPoint")
-		(at 139.7 106.68 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "bc450640-bd10-4177-9aeb-180c11dea8c0")
-		(property "Reference" "TP1901"
-			(at 130.556 106.68 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 136.398 104.14 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "cacophony-library:TP_PAD"
-			(at 139.7 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 139.7 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dbe74d19-cda0-47b9-8464-e186b1e65742")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
-					(reference "TP1901")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 156.21 125.73 0)
 		(unit 1)
@@ -7426,6 +7626,85 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "TP1908")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 210.82 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce771a6a-b949-4323-98b1-63033e91e447")
+		(property "Reference" "#PWR01915"
+			(at 210.82 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 210.82 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 210.82 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c3641aa-131e-4937-87f3-d6adee5e2308")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "#PWR01915")
 					(unit 1)
 				)
 			)
@@ -7766,85 +8045,6 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "#PWR0148")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "cacophony-library:TestPoint")
-		(at 180.34 86.36 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "e6cedbff-7edc-4645-8aec-1458ff4e04bb")
-		(property "Reference" "TP1904"
-			(at 185.674 86.36 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 185.42 87.6299 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "cacophony-library:TP_PAD"
-			(at 180.34 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 180.34 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0f3df067-c2e5-4df6-a1ca-10d40a8dc51f")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
-					(reference "TP1904")
 					(unit 1)
 				)
 			)
