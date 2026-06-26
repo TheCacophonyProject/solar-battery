@@ -2046,7 +2046,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "cacophony-library:PS1240P02CT3"
+		(symbol "cacophony-library:FST-1230"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2062,7 +2062,7 @@
 					)
 				)
 			)
-			(property "Value" "PS1240P02CT3"
+			(property "Value" "FST-1230"
 				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2072,7 +2072,7 @@
 					)
 				)
 			)
-			(property "Footprint" "cacophony-library:BUZ-TH_BD12.5-P5.00-D0.9"
+			(property "Footprint" "cacophony-library:BUZ-SMD_L12.0-W12.0_FUET-1230"
 				(at 0 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2083,7 +2083,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Buzzers_TDK_PS1240P02CT3_Piezo-buzzer3V-4KHz-12-2-3-5_C76873.html"
+			(property "Datasheet" "https://lcsc.com/product-detail/Buzzers_FST-FST-1230_C391037.html"
 				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2105,7 +2105,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C76873"
+			(property "Manufacturer" "FUET(福声科技)"
 				(at 0 -13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2116,7 +2116,40 @@
 					)
 				)
 			)
-			(symbol "PS1240P02CT3_0_1"
+			(property "MPN" "FUET-1230"
+				(at 0 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C391037"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Buzzers"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FST-1230_0_1"
 				(polyline
 					(pts
 						(xy -1.27 1.78) (xy -1.27 -1.78)
@@ -5333,6 +5366,121 @@
 		)
 	)
 	(symbol
+		(lib_id "cacophony-library:FST-1230")
+		(at 76.2 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e0aaabe-7923-490f-bae3-74f6ba9f4205")
+		(property "Reference" "BUZZER1"
+			(at 81.28 91.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FST-1230"
+			(at 81.28 93.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "cacophony-library:BUZ-SMD_L12.0-W12.0_FUET-1230"
+			(at 76.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Buzzers_FST-FST-1230_C391037.html"
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FUET(福声科技)"
+			(at 76.2 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FUET-1230"
+			(at 76.2 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C391037"
+			(at 76.2 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95674034-477e-44e3-8cd1-c7f83169418b")
+		)
+		(pin "2"
+			(uuid "d840bc89-3335-4eed-9e32-8f1c5ddccdbb")
+		)
+		(instances
+			(project "solar-BQ25798"
+				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
+					(reference "BUZZER1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 207.01 119.38 90)
 		(unit 1)
@@ -5496,99 +5644,6 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
 					(reference "#PWR01906")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "cacophony-library:PS1240P02CT3")
-		(at 76.2 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "259d5b6a-c033-4597-b310-9c58ca76495e")
-		(property "Reference" "BUZZER1901"
-			(at 81.28 91.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PS1240P02CT3"
-			(at 81.28 93.9799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "cacophony-library:BUZ-TH_BD12.5-P5.00-D0.9"
-			(at 76.2 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Buzzers_TDK_PS1240P02CT3_Piezo-buzzer3V-4KHz-12-2-3-5_C76873.html"
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C76873"
-			(at 76.2 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "08179f3c-305c-40cc-bae7-9c74e7e9ad7b")
-		)
-		(pin "2"
-			(uuid "bd3e6b14-503d-459e-ab91-1495fdcdac7a")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/ac60c5ba-2ea6-4067-b746-38f3763e0366"
-					(reference "BUZZER1901")
 					(unit 1)
 				)
 			)
