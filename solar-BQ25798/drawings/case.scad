@@ -4,7 +4,10 @@ $fa=4;
 // $fa = 8;
 // $fs = 0.8;
 
-output = "";
+output = "top_side_inner";
+// output = "top_side_outer_solid_infill";
+// output = "bottom_side_inner";
+// output = "bottom_side_inner_solid_infill";
 
 
 // ========== Boarder =============
@@ -66,9 +69,18 @@ buzzer_d = 10;
 // Programmer
 programmer_pos_x = 85.61;
 programmer_pos_y = -14.86;
-programmer_len_x = 11;
-programmer_len_y = 7;
+programmer_len_x = 9.906+0.4;
+programmer_len_y = 6.096+0.4;
 programmer_r = 1;
+
+// Thermal switch
+thermal_switch_pos_x = 71;
+thermal_switch_pos_y = 23;
+thermal_switch_pos_z = 6.45;
+thermal_switch_size_x = 8.9;
+thermal_switch_size_y = 28;
+thermal_switch_size_z = 5.1;
+thermal_switch_wall_t = 1.2;
 
 // Input
 
@@ -398,30 +410,38 @@ scale([1, -1, 1]) difference() {
             cube([300, 0.8, 100], center=true);
         }
 
-        // Buzzer hole support
-        translate([buzzer_pos_x, buzzer_pos_y, 0])
-        union(){
-            cylinder(d=11, h=h8+1);
-            cylinder(d1=13, d2=11, h=2);
-            translate([0, 0, h8-2-3])
-            cylinder(d1=11, d2=13, h=2); 
-            translate([0, 0, h8-3])
-            cylinder(d=13, h=2);
+        
+        hull() {
+            translate([thermal_switch_pos_x, thermal_switch_pos_y, thermal_switch_pos_z])
+            cube([thermal_switch_size_x+thermal_switch_wall_t*2
+            , 20
+            , thermal_switch_size_z+thermal_switch_wall_t*2], center=true);
+
+            translate([thermal_switch_pos_x, thermal_switch_pos_y, thermal_switch_pos_z+4])
+            cube([thermal_switch_size_x+thermal_switch_wall_t*2
+            , 30
+            , 0.01], center=true);
         }
 
-        // Support wall, to be removed after print.
-        difference() {
-            union() {
-                translate([75, -75/2, 0])
-                cube([1, 75, h8-z-0.6]);
-                translate([75+0.5, 0, 0])
-                cube([1, 90, 0.6], center=true);
-            }
-            translate([buzzer_pos_x, buzzer_pos_y, h8-6])
-            cylinder(d=14, h=5);
+        translate([thermal_switch_pos_x, thermal_switch_pos_y, 0])
+        cube([thermal_switch_size_x+thermal_switch_wall_t*2, 20, 1], center=true);
+        
+        translate([thermal_switch_pos_x, thermal_switch_pos_y+10, 0])
+        cube([thermal_switch_size_x+thermal_switch_wall_t*2, 0.6, 20], center=true);
+        translate([thermal_switch_pos_x, thermal_switch_pos_y-10, 0])
+        cube([thermal_switch_size_x+thermal_switch_wall_t*2, 0.6, 10], center=true);
+        translate([thermal_switch_pos_x, thermal_switch_pos_y-3.3, 0])
+        cube([thermal_switch_size_x+thermal_switch_wall_t*2, 0.6, 10], center=true);
+        translate([thermal_switch_pos_x, thermal_switch_pos_y+3.3, 0])
+        cube([thermal_switch_size_x+thermal_switch_wall_t*2, 0.6, 10], center=true);
+        
 
-            translate([buzzer_pos_x, buzzer_pos_y-15, 0])
-            cube([30, 30, 30], center=true);
+        // Support wall, to be removed after print.
+        union() {
+            translate([75, -75/2, 0])
+            cube([1, 45, h8-z-0.6]);
+            translate([75+0.5, 0, 0])
+            cube([1, 90, 0.6], center=true);
         }
     }
 
@@ -493,12 +513,22 @@ scale([1, -1, 1]) difference() {
     }
 
     // Buzzer horn hole
-    translate([buzzer_pos_x, buzzer_pos_y, 0])
-    cylinder(d=buzzer_d, h=h8+1);  
+    translate([0, 0, 0.3])
+    linear_extrude(height = 3.2) 
+    rec_from_points(x1 =77.8, y1 = -43, x2 = 65.5, y2 = -40); 
 
     // Inductor cutout
     linear_extrude(height = 8) 
     rec_from_pos_size(pos_x = 84.65, pos_y = -6.25, len_x = 12.7, len_y = 12.7);
+
+    // Thermal switch cutout
+
+    translate([thermal_switch_pos_x, thermal_switch_pos_y, thermal_switch_pos_z])
+    cube([thermal_switch_size_x
+    , thermal_switch_size_y+1
+    , thermal_switch_size_z], center=true);
+
+    
 }
 // rotate([0, 180, 0]) translate([0, 0, -10])
 // top_side_inner();
@@ -583,10 +613,6 @@ scale([1, -1, 1]) rotate([0, 180, 0]) difference() {
             screw_head_cutout();
         }
     }
-
-    // Buzzer horn hole
-    translate([buzzer_pos_x, buzzer_pos_y, 0])
-    cylinder(d1=buzzer_d, d2=buzzer_d+h8, h=h8+5);
 }
 // top_side_outer();
 
@@ -681,18 +707,25 @@ scale([1, -1, 1]) translate([0, 0, -h8]) union() {
         linear_extrude(height = 30)
         rec_from_pos_size(pos_x = programmer_pos_x, pos_y = programmer_pos_y, len_x = programmer_len_x, len_y = programmer_len_y, r=programmer_r);
 
-        // buzzer pin cutout
+        // Thermal switch pin
+        difference() {
+            translate([0, 0, -1])
+            scale([1, -1, 1])
+            linear_extrude(height = 4)
+            rec_from_pos_size(pos_x = 75.245, pos_y = -4.525, len_x = 11, len_y = 35.11, r=1);
+
+            // translate([0, 0, -10])
+            // scale([1, -1, 1])
+            // linear_extrude(height = 30)
+            // rec_from_pos_size(pos_x = programmer_pos_x, pos_y = programmer_pos_y, len_x = programmer_len_x+2, len_y = programmer_len_y+2, r=programmer_r+1);
+        }
+        
+        // EEPROM cutout
         translate([0, 0, -1])
         scale([1, -1, 1])
         linear_extrude(height = 4)
-        rec_from_pos_size(pos_x = 75.15, pos_y = -30, len_x = 9.7, len_y = 6.8, r=1);
-        
-        // buzzer pin cutout
-        translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = 4)
-        rec_from_pos_size(pos_x = 75.3, pos_y = -7.15, len_x = 10.3, len_y = 15.1, r=1);
-        
+        rec_from_pos_size(pos_x = 87.11, pos_y = -6.795, len_x = 7.06, len_y = 8.03, r=1);
+
         // screw hole for the 
         translate([plug_screw_x, 0, 1])
         cylinder(d=screw_diameter_pilot, h=100);
