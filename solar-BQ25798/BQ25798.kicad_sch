@@ -5,183 +5,6 @@
 	(uuid "5405bbdf-a3b5-457d-aed7-a8e04caa8108")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Device:C_Polarized"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Polarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "C_Polarized_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -2044,12 +1867,6 @@
 		(uuid "a9b3b377-a4ad-44cd-9a31-0cbd880cac12")
 	)
 	(junction
-		(at 241.3 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ae8f1d2b-86cd-4c6e-8b3b-568cee88bb18")
-	)
-	(junction
 		(at 231.14 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2153,7 +1970,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 80.01) (xy 241.3 80.01)
+			(xy 223.52 80.01) (xy 271.78 80.01)
 		)
 		(stroke
 			(width 0)
@@ -2290,16 +2107,6 @@
 			(type default)
 		)
 		(uuid "29a7727d-93d4-480c-82e8-eb20b21dcd21")
-	)
-	(wire
-		(pts
-			(xy 241.3 80.01) (xy 271.78 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29b93e4b-3361-4fdd-bf0e-e1c48465425f")
 	)
 	(wire
 		(pts
@@ -2793,16 +2600,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 80.01) (xy 241.3 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c2fc87a-b462-4fce-b411-3e1e56272401")
-	)
-	(wire
-		(pts
 			(xy 217.17 123.19) (xy 224.79 123.19)
 		)
 		(stroke
@@ -3080,16 +2877,6 @@
 			(type default)
 		)
 		(uuid "c6bef942-edd1-40d9-81bb-6d30a161768d")
-	)
-	(wire
-		(pts
-			(xy 241.3 90.17) (xy 241.3 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cba78cd4-0da4-4eb5-bb91-7660e3b7a2df")
 	)
 	(wire
 		(pts
@@ -3863,6 +3650,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 224.79 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "65cc6903-2d89-4651-81f8-20901fa6703f")
 		)
@@ -3946,6 +3744,17 @@
 			)
 		)
 		(property "LCSC Part" "C15850"
+			(at 237.49 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 237.49 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4049,6 +3858,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 231.14 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "569d0539-a45d-46e3-85d0-9aeeafbe0ddf")
 		)
@@ -4059,88 +3879,6 @@
 			(project "solar-BQ25798"
 				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
 					(reference "C1717")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 241.3 86.36 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "1c1a3b13-1da1-4849-a182-fe6af5b5e944")
-		(property "Reference" "C1719"
-			(at 245.11 84.2009 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100uF 50V"
-			(at 245.11 86.7409 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 242.2652 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 241.3 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 241.3 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "eed50266-1e08-4305-be20-c665b254c2f5")
-		)
-		(pin "1"
-			(uuid "7a135bf1-6350-466b-93e4-ff735a465f73")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "C1719")
 					(unit 1)
 				)
 			)
@@ -4303,6 +4041,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 121.92 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "de4e2a75-461e-4525-b0e6-59e9488bd52b")
 		)
@@ -4386,6 +4135,17 @@
 			)
 		)
 		(property "LCSC Part" "C15850"
+			(at 209.55 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 209.55 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4566,6 +4326,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 119.38 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fdfe5316-2390-4619-aabc-f933fc972e0e")
 		)
@@ -4649,6 +4420,17 @@
 			)
 		)
 		(property "LCSC Part" "C15850"
+			(at 209.55 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 209.55 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -4754,85 +4536,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 241.3 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "30d6d172-8edb-43ba-970a-0a0dde4303a0")
-		(property "Reference" "#PWR01717"
-			(at 241.3 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 241.3 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 241.3 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 241.3 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 241.3 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e654e77f-4206-4be8-9bf9-5100160d458f")
-		)
-		(instances
-			(project "solar-BQ25798"
-				(path "/822b745e-d66e-4222-a6d2-360780548724/d84bfbfe-22f6-48d9-a29f-b45e9820ae80"
-					(reference "#PWR01717")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 184.15 69.85 0)
 		(unit 1)
@@ -4900,6 +4603,17 @@
 			)
 		)
 		(property "LCSC Part" "C307331"
+			(at 184.15 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 184.15 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -5072,6 +4786,17 @@
 		)
 		(property "LCSC Part" "C1523"
 			(at 198.12 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 198.12 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5490,6 +5215,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 93.98 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "20323090-3d1d-45e1-930d-406a9e1b48bc")
 		)
@@ -5573,6 +5309,17 @@
 			)
 		)
 		(property "LCSC Part" "C13585"
+			(at 256.54 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 256.54 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5676,6 +5423,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 270.51 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3520ba65-b0b3-4aff-8339-d280f6190b27")
 		)
@@ -5758,6 +5516,17 @@
 			)
 		)
 		(property "LCSC Part" "C13564"
+			(at 217.17 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 217.17 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -5861,6 +5630,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 194.31 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a4c277bf-05df-4f28-98b1-a1ef153f491c")
 		)
@@ -5944,6 +5724,17 @@
 			)
 		)
 		(property "LCSC Part" "C17521"
+			(at 49.53 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 49.53 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6123,6 +5914,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 194.31 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "453c514f-5f42-47f8-9502-12f1320b2bf6")
 		)
@@ -6285,6 +6087,17 @@
 			)
 		)
 		(property "LCSC Part" "C13585"
+			(at 242.57 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 242.57 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -6625,6 +6438,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 217.17 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6e14c943-f7d1-4d1c-8087-70ccf442b146")
 		)
@@ -6705,6 +6529,17 @@
 			)
 		)
 		(property "LCSC Part" "C307339"
+			(at 119.38 101.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 119.38 101.6 90)
 			(hide yes)
 			(show_name no)
@@ -6808,6 +6643,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 251.46 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c34a9fb1-9e64-4544-b2bb-fd06a2c6ddb6")
 		)
@@ -6901,6 +6747,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 223.52 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cb1c2748-052d-467d-8952-4891ee97a7a5")
 		)
@@ -6983,6 +6840,17 @@
 		)
 		(property "LCSC Part" "C2876593"
 			(at 158.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 158.75 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7166,6 +7034,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 195.58 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a04539bc-6bb8-4164-ae64-cac808c36d36")
 		)
@@ -7213,7 +7092,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cacophony-library:TP_PAD"
+		(property "Footprint" "cacophony-library:TP_PAD_S"
 			(at 133.35 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -7237,6 +7116,17 @@
 		)
 		(property "Description" "test point"
 			(at 133.35 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 133.35 130.81 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7335,6 +7225,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 113.03 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a105b5f2-9889-484a-a6ee-61ebd26691ab")
 		)
@@ -7418,6 +7319,17 @@
 			)
 		)
 		(property "LCSC Part" "C13585"
+			(at 107.95 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 107.95 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -7679,6 +7591,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 49.53 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d10f954a-3eb9-4760-ad11-bf6319d73532")
 		)
@@ -7726,7 +7649,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cacophony-library:TP_PAD"
+		(property "Footprint" "cacophony-library:TP_PAD_S"
 			(at 134.62 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7750,6 +7673,17 @@
 		)
 		(property "Description" "test point"
 			(at 134.62 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 134.62 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7840,6 +7774,17 @@
 		)
 		(property "LCSC Part" "C25076"
 			(at 194.31 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 194.31 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7942,6 +7887,17 @@
 				)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 223.52 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7a55ee02-2514-4e92-8cd9-c06b947e954a")
 		)
@@ -8024,6 +7980,17 @@
 			)
 		)
 		(property "LCSC Part" "C23733"
+			(at 187.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 187.96 127 0)
 			(hide yes)
 			(show_name no)
@@ -8193,6 +8160,17 @@
 			)
 		)
 		(property "LCSC Part" "C25744"
+			(at 208.28 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" ""
 			(at 208.28 45.72 90)
 			(hide yes)
 			(show_name no)

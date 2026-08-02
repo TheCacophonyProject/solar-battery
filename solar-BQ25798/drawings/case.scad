@@ -4,11 +4,7 @@ $fa=4;
 // $fa = 8;
 // $fs = 0.8;
 
-output = "top_side_inner";
-// output = "top_side_outer_solid_infill";
-// output = "bottom_side_inner";
-// output = "bottom_side_inner_solid_infill";
-
+output = "bottom_side_inner";
 
 // ========== Boarder =============
 // To make the boarder, we generate the boarder with the recommended maximum 
@@ -66,12 +62,11 @@ buzzer_pos_x = 71.4;
 buzzer_pos_y = -30.1;
 buzzer_d = 10;
 
-// Programmer
-programmer_pos_x = 85.61;
-programmer_pos_y = -14.86;
-programmer_len_x = 9.906+0.4;
-programmer_len_y = 6.096+0.4;
-programmer_r = 1;
+// DXF paths
+programmer_dxf = "solar-BQ25798-programmer-border.dxf";
+connectors_dxf = "solar-BQ25798-connectors-border.dxf";
+components_dxf = "solar-BQ25798-B_components-border.dxf";
+
 
 // Thermal switch
 thermal_switch_pos_x = 71;
@@ -82,15 +77,16 @@ thermal_switch_size_y = 28;
 thermal_switch_size_z = 5.1;
 thermal_switch_wall_t = 1.2;
 
-// Input
-
-// Output
-
-
 // boarder is a function to make the boarder with given height using a dxf file.
 module boarder(height) {
     linear_extrude(height = height)
     import("solar-battery-boarder-case.dxf"); 
+}
+
+module import_kicad_dxf(name, h) {
+    // scale(25.4)
+    linear_extrude(height = h)
+    import(name); 
 }
 
 // Helper module to make a rectangle from 2 x and 2 y points with options rounded corners.
@@ -517,7 +513,7 @@ scale([1, -1, 1]) difference() {
     linear_extrude(height = 3.2) 
     rec_from_points(x1 =77.8, y1 = -43, x2 = 65.5, y2 = -40); 
 
-    // Inductor cutout
+    // Inductor cutout //TODO, improve this
     linear_extrude(height = 8) 
     rec_from_pos_size(pos_x = 84.65, pos_y = -6.25, len_x = 12.7, len_y = 12.7);
 
@@ -634,14 +630,14 @@ module top_side_outer_solid_infill() {
 
 // Bottom side, inside bit
 module bottom_side_inner() 
-scale([1, -1, 1]) translate([0, 0, -h8]) union() {
+mirror([0, 1, 0]) translate([0, 0, -h8]) union() {
     difference() {
         bat_offset = -72.375;
         // Main body
         boarder(height = h8);
 
         // Battery cutout
-        scale([1, -1, 1])
+        mirror([0, 1, 0])
         difference() {
             translate([bat_offset, 0, 0])
             for (i = [0:7]) {
@@ -683,50 +679,20 @@ scale([1, -1, 1]) translate([0, 0, -h8]) union() {
             }
         }
 
-        // Output 1 cutout
-        // translate([0, 0, -10])
-        // scale([1, -1, 1])
-        // linear_extrude(height = 30)
-        // rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
-
-        // Output 2 cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
-
-        // Input cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
+        // Connector cutout
+        translate([0, 0, -1])
+        import_kicad_dxf(connectors_dxf, h=30);
 
         // Programmer cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_pos_size(pos_x = programmer_pos_x, pos_y = programmer_pos_y, len_x = programmer_len_x, len_y = programmer_len_y, r=programmer_r);
-
-        // Thermal switch pin
-        difference() {
-            translate([0, 0, -1])
-            scale([1, -1, 1])
-            linear_extrude(height = 4)
-            rec_from_pos_size(pos_x = 75.245, pos_y = -4.525, len_x = 11, len_y = 35.11, r=1);
-
-            // translate([0, 0, -10])
-            // scale([1, -1, 1])
-            // linear_extrude(height = 30)
-            // rec_from_pos_size(pos_x = programmer_pos_x, pos_y = programmer_pos_y, len_x = programmer_len_x+2, len_y = programmer_len_y+2, r=programmer_r+1);
-        }
-        
-        // EEPROM cutout
         translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = 4)
-        rec_from_pos_size(pos_x = 87.11, pos_y = -6.795, len_x = 7.06, len_y = 8.03, r=1);
-
-        // screw hole for the 
+        import_kicad_dxf(programmer_dxf, h=30);
+        
+        // Components cutout
+        component_cutout_height = 2;
+        translate([0, 0, -1])
+        import_kicad_dxf(components_dxf, component_cutout_height+1);
+        
+        // screw hole for the plug
         translate([plug_screw_x, 0, 1])
         cylinder(d=screw_diameter_pilot, h=100);
         translate([plug_screw_x, 0, h8-0.5])
@@ -834,76 +800,21 @@ scale([1, -1, 1]) rotate([0, 180, 0]) union() {
             }
         }
 
-        // Output 1 cutout
-        // translate([0, 0, -10])
-        // scale([1, -1, 1])
-        // linear_extrude(height = 30)
-        // rec_from_points(83.2, -0.6, 93.6, 12.2, r=0.4); 
-
-        // Output 2 cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
-        hull() {
-            translate([0, 0, h8])
-            scale([1, -1, 1])
-            linear_extrude(height = 0.01)
-            rec_from_points(83.2-5, 14.8, 93.6, 27.6, r=0.4);
-
-            translate([0, 0, h8-5])
-            scale([1, -1, 1])
-            linear_extrude(height = 5)
-            rec_from_points(83.2, 14.8, 93.6, 27.6, r=0.4);
-        }
-
-
-        // Input cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
-        hull() {
-            translate([0, 0, h8])
-            scale([1, -1, 1])
-            linear_extrude(height = 0.01)
-            rec_from_points(83.3-5, -28.6, 94.3, -19.8, r=0.4); 
-
-            translate([0, 0, h8-5])
-            scale([1, -1, 1])
-            linear_extrude(height = 5)
-            rec_from_points(83.3, -28.6, 94.3, -19.8, r=0.4); 
-        }
+        // Connectors cutout
+        x_offset = 90;
+        translate([x_offset, 0, 8]) 
+        rotate([0, -45, 0])
+        translate([-x_offset, 0, -20])
+        import_kicad_dxf(connectors_dxf, h = 40);
 
         // Programmer cutout
-        translate([0, 0, -10])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_pos_size(
-            pos_x = programmer_pos_x, 
-            pos_y = programmer_pos_y, 
-            len_x = programmer_len_x, 
-            len_y = programmer_len_y, 
-            r = programmer_r
-        );
-
+        translate([0, 0, -1])
+        import_kicad_dxf(programmer_dxf, 30);
+        
         // Cutout for separate connector cover part
-        translate([133, 0, 30])
+        translate([132.9, 0, 30])
         cube([100, 100, 100], center=true);
     }
-
-    // This is just a thin loop that goes around the edge
-    // This helps with the printability, making the outer edge a full loop.
-    // translate([0, 0, h8-0.6])
-    // difference() {
-    //     boarder2(height=0.6);
-
-    //     translate([0, 0, -1])
-    //     linear_extrude(height = 3) 
-    //     offset(r=-0.5)
-    //     projection()
-    //     boarder2(height=1);
-    // }
 
     // This is a thin wall on the back side where the cutout for the battery and components go into the wall
     difference() {
@@ -945,73 +856,43 @@ module bottom_side_outer_solid_infill() {
 module plug_cover() scale([1, -1, 1]) rotate([0, 180, 0]) union() {
     difference() {
         union() {
-            linear_extrude(height = h8) 
-            rec_from_points(83.2, 28.6, 92.5, -27.6);
+            linear_extrude(height = h8)
+            rec_from_points(83.2, 28.6, 92.5, -26);
 
-            // Programmer alignment key
-            key_length = 0.9; // percentage of key length 
             key_clearance = 0.2;    // Clearance from key hole to key
+            radius = 0.6;
+            key_length = 0.9; // percentage of key length 
             p = 0.4;    // percentage of length of pointy bit
-            translate([0, 0, -h8*(key_length-p)])
-            scale([1, -1, 1])
-            linear_extrude(height = h8*(1+key_length-p))
-            rec_from_pos_size(
-                pos_x = programmer_pos_x, 
-                pos_y = programmer_pos_y, 
-                len_x = programmer_len_x-key_clearance*2, 
-                len_y = programmer_len_y-key_clearance*2,
-                r = programmer_r+key_clearance
-            );
-            // rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
-            scale([1, -1, 1])
-            hull() {
-                translate([0, 0, -h8*key_length])
-                linear_extrude(height = 0.1)
-                rec_from_pos_size(
-                    pos_x = programmer_pos_x, 
-                    pos_y = programmer_pos_y, 
-                    len_x = programmer_len_x-2, 
-                    len_y = programmer_len_y-2,
-                    r = 1
-                );
-                // rec_from_points(80.6+1, -17.2+1, 91.6-1, -10.2-1, r=1);
 
-                translate([0, 0, -h8*(key_length-p)])
-                linear_extrude(height = 0.1)
-                rec_from_pos_size(
-                    pos_x = programmer_pos_x, 
-                    pos_y = programmer_pos_y, 
-                    len_x = programmer_len_x-key_clearance*2, 
-                    len_y = programmer_len_y-key_clearance*2,
-                    r = programmer_r+key_clearance
-                );
-                // rec_from_points(80.6+key_clearance, -17.2+key_clearance, 91.6-key_clearance, -10.2-key_clearance, r=1);
+            translate([0, 0, -h8*(key_length-p)])
+            hull() {        
+                // Main part
+                linear_extrude(height = h8*(1+key_length-p)) 
+                offset(r=radius)
+                offset(r=-key_clearance-radius)
+                import(programmer_dxf);
+
+                // Pointy bit
+                translate([0, 0, -h8*p])
+                linear_extrude(height = h8*(1+key_length)) 
+                offset(r=radius)
+                offset(r=-key_clearance-1-radius)
+                import(programmer_dxf);
             }
         }
 
         plug_height = 7;
 
-        // 3 Pin Output cutout
-        translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = plug_height+1)
-        rec_from_points(80.2, 14.8, 93.6, 37.6, r=0.4);
-        translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(43.2, 14.8, 92-4, 37.6, r=0.4);
+        // Cut out area around plugs
+        translate([-2, 0, 0])
+        import_kicad_dxf(name = connectors_dxf, h = plug_height);
+        translate([2, 0, 0])
+        import_kicad_dxf(name = connectors_dxf, h = plug_height);
 
+        // Cut our space for wires 
+        translate([-7.5, 0, 0])
+        import_kicad_dxf(name = connectors_dxf, h = h8+1);
 
-        // 2 Pin Input cutout
-        translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = plug_height+1)
-        rec_from_points(80.3, -38.6, 94.3, -19.8, r=0.4);
-        translate([0, 0, -1])
-        scale([1, -1, 1])
-        linear_extrude(height = 30)
-        rec_from_points(80.3, -38.6, 92-4, -19.8, r=0.4);
-        
         // Screw hole
         translate([plug_screw_x, 0, 0]) {
             translate([0, 0, 4])
@@ -1024,14 +905,14 @@ module plug_cover() scale([1, -1, 1]) rotate([0, 180, 0]) union() {
         }
     }
 }
-// plug_cover();
+// !plug_cover();
 
 module plug_cover_solid_infill() {
-    translate([-90, 20, -16])
-    cube([20, 20, 20], center=true);
-
-    translate([-90, -27, -16])
-    cube([20, 20, 20], center=true);
+    translate([0, 0,-h8+5])
+    scale([1, -1, 1]) rotate([0, 180, 0])
+    linear_extrude(height = h8+1) 
+    offset(r=3)
+    import(connectors_dxf);
 
     // Screw hole
     translate([-plug_screw_x, 0, 0])
@@ -1088,3 +969,16 @@ if (output == "plug_cover") {
 if (output == "plug_cover_solid_infill") {
     plug_cover_solid_infill();
 }
+
+translate([88.77, -24.21, 0])
+cube([5, 5, 10],center=true);
+
+translate([89.035, 21.1, 0])
+cube([5, 5, 10],center=true);
+
+translate([95, 0, -h8])
+cube([5, 60, 1],center=true);
+
+mirror([0, 1, 0])
+translate([0, 0, 0])
+import_kicad_dxf(connectors_dxf, h=30);

@@ -62,7 +62,7 @@
           "hatch_thickness": 1.0,
           "min_clearance": 0.0,
           "min_island_area": 10.0,
-          "min_thickness": 0.2,
+          "min_thickness": 0.25,
           "pad_connection": 1,
           "remove_islands": 0,
           "thermal_relief_gap": 0.2,
@@ -708,9 +708,21 @@
           "label": "JLCPCB",
           "name": "JLCPCB",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
         }
       ],
-      "filter_string": "",
+      "filter_string": "R",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
@@ -766,7 +778,7 @@
         "uuid": "822b745e-d66e-4222-a6d2-360780548724"
       }
     ],
-    "used_designators": "BUZZER1",
+    "used_designators": "R1,R6,TP1904,TP1906,#PWR1902,#PWR1916-1918,D1-3,D104,C122,U1,BUZZER1",
     "variants": []
   },
   "sheets": [
