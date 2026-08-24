@@ -778,7 +778,7 @@
         "uuid": "822b745e-d66e-4222-a6d2-360780548724"
       }
     ],
-    "used_designators": "R1,R6,TP1904,TP1906,#PWR1902,#PWR1916-1918,D1-3,D104,C122,U1,BUZZER1",
+    "used_designators": "BUZZER1,U1,C122,D1-3,D104,#PWR1902,#PWR1909,#PWR1916-1918,TP1904,TP1906,R1,R6,R1815",
     "variants": []
   },
   "sheets": [
