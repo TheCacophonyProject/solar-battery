@@ -14,3 +14,13 @@ pcbs:
       val: {{.Version}}
     - key: HASH
       val: {{.GIT_HASH}}
+
+panels:
+- id: solar-battery-panel
+  path: .generated-pcbs/solar-battery-panel
+  script: ./panel-solar-battery.py
+  text_variables:
+    - key: TAG
+      val: {{.Version}}
+    - key: HASH
+      val: {{.GIT_HASH}}

@@ -58,3 +58,5 @@ kicadpartsplacer*
 
 *.history
 *.deb
+
+.generated-pcbs
