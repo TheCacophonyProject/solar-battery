@@ -91412,46 +91412,6 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text_box "TODO: \n- Change order of the battery cells so the ground is on the far side from the charging components."
-		(start -55 -90)
-		(end -3 -69.5)
-		(margins 1.0025 1.0025 1.0025 1.0025)
-		(layer "Cmts.User")
-		(uuid "b129de49-8a41-4161-87fc-bf188cd16f33")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left top)
-		)
-		(border yes)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(knockout no)
-	)
-	(gr_text_box "TODO:\n- Using 6 layers with epoxy filled and capped vias so can get some better placement of the vias\n- Re-do of pinout for ATtiny could improve/tidy up layout.\n- General reshuffle to tidy up layout."
-		(start -31.29 -89.15)
-		(end 26.06 -61.87)
-		(margins 1.0025 1.0025 1.0025 1.0025)
-		(layer "User.1")
-		(uuid "539b9b78-237c-48c0-95c2-5f42b757e522")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left top)
-		)
-		(border yes)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(knockout no)
-	)
 	(dimension
 		(type orthogonal)
 		(layer "Cmts.User")

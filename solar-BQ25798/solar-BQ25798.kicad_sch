@@ -6832,26 +6832,6 @@
 		)
 		(uuid "176a9f57-7e46-4497-90a7-0aa41cf3d70b")
 	)
-	(text_box "TODO, before next PCB order:\n- Change REGSRC for the BQ76920 so it can power up even if cells are not present or have not been woken up yet.\n- Don't allow to discharge through Input Ground."
-		(exclude_from_sim no)
-		(at 326.39 13.97 0)
-		(size 80.01 24.13)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "29751a58-1fc4-4ca9-a04c-e58dc4eb0631")
-	)
 	(text_box "This wire should be the heater element that has a resistance of about 20Ω"
 		(exclude_from_sim no)
 		(at 21.59 241.3 0)
