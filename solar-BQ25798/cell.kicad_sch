@@ -1615,7 +1615,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 92.71) (xy 148.59 93.98)
+			(xy 148.59 92.71) (xy 148.59 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1655,7 +1655,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 99.06) (xy 148.59 132.08)
+			(xy 148.59 104.14) (xy 148.59 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2748,6 +2748,36 @@
 			)
 		)
 	)
+	(label "BAT"
+		(at 152.4 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "233f23f4-1e39-4e8a-a5dc-f8f0f1678128")
+	)
+	(label "C_{OUT}"
+		(at 190.5 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "56a961f2-19ad-4c7a-9af2-094dd7b4f340")
+	)
+	(label "V-"
+		(at 163.83 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "790e196f-790a-4ada-9f75-0223a1184dd6")
+	)
 	(label "BAT_NEG"
 		(at 182.88 132.08 0)
 		(effects
@@ -2757,6 +2787,26 @@
 			(justify left bottom)
 		)
 		(uuid "a01139d8-ea3b-43ed-b3a7-dab853ccee30")
+	)
+	(label "RP_GATE"
+		(at 106.68 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a5ff7738-d15b-4843-b532-beb3e45e3b52")
+	)
+	(label "D_{OUT}"
+		(at 189.23 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea3701eb-ee77-432d-b97e-388a1cf6fa05")
 	)
 	(hierarchical_label "CELL-"
 		(shape input)
@@ -4000,7 +4050,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 148.59 96.52 0)
+		(at 148.59 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4011,7 +4061,7 @@
 		(fields_autoplaced yes)
 		(uuid "aa032945-31cd-4cfe-9261-e3118cedaeab")
 		(property "Reference" "C201"
-			(at 151.13 95.2562 0)
+			(at 151.13 100.3362 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4022,7 +4072,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 151.13 97.7962 0)
+			(at 151.13 102.8762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4033,7 +4083,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 148.59 96.52 0)
+			(at 148.59 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4044,7 +4094,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 96.52 0)
+			(at 148.59 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4055,7 +4105,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 148.59 96.52 0)
+			(at 148.59 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4066,7 +4116,7 @@
 			)
 		)
 		(property "LCSC Part" "C1525"
-			(at 148.59 96.52 0)
+			(at 148.59 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4077,7 +4127,7 @@
 			)
 		)
 		(property "JLCPCB" ""
-			(at 148.59 96.52 0)
+			(at 148.59 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
