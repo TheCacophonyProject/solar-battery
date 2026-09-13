@@ -1,3 +1,4 @@
+# pyright: basic, reportMissingImports=false
 import json
 import os
 import shutil
@@ -9,7 +10,6 @@ dir_path = ".generated-pcbs/solar-battery-panel"
 input = "solar-BQ25798/solar-BQ25798.kicad_pcb"
 output = f"{dir_path}/solar-battery-panel.kicad_pcb"
 project = f"{dir_path}/solar-battery-panel.kicad_pro"
-drc_report = f"{dir_path}/solar-battery-panel-drc.json"
 
 # Footprints that the panelisation is expected to change (the board outline is
 # redrawn through them), so their library mismatch is not a real error.
@@ -42,18 +42,20 @@ def add_drc_exclusions(project_file, exclusions):
         settings = json.load(f)
     design_settings = settings["board"]["design_settings"]
     current = design_settings.get("drc_exclusions", [])
-    # Older projects store bare marker strings rather than [marker, comment].
+    # A DRC exclusion is a [marker, comment] pair. Old projects store bare markers.
     seen = {e[0] if isinstance(e, list) else e for e in current}
     added = [e for e in exclusions if e[0] not in seen]
     design_settings["drc_exclusions"] = current + added
     with open(project_file, "w") as f:
         json.dump(settings, f, indent=2)
-        _ = f.write("\n")
+        f.write("\n")
     return added
 
+# Remove and create the output directory to ensure a clean run
 shutil.rmtree(dir_path, ignore_errors=True)
 os.makedirs(dir_path, exist_ok=True)
 
+# Generate and run the kikit command
 command = [
     "kikit", "panelize",
     "--layout", "grid; rows: 3; cols: 1; hspace: 3mm; renameref: {orig}-{n}",
@@ -66,17 +68,16 @@ command = [
     input,
     output
 ]
+subprocess.run(command, check=False)
 
-_ = subprocess.run(command, check=False)
-
-# Set footprint library file
+# Set footprint library to prevent DRC "no library" errors
 library_str = """(fp_lib_table
 	(version 7)
 	(lib (name "cacophony-library") (type "KiCad") (uri "${KIPRJMOD}/../../kicad-library/cacophony-library.pretty") (options "") (descr ""))
 )
 """
 with open(f"{dir_path}/fp-lib-table", "w") as f:
-    _ = f.write(library_str)
+    f.write(library_str)
 
 # Exclude the library mismatches caused by panelising the outline footprints.
 added = add_drc_exclusions(project, footprint_mismatch_exclusions(output, outline_footprints))
