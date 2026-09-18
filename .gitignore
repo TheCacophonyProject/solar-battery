@@ -60,3 +60,5 @@ kicadpartsplacer*
 *.deb
 
 .generated-pcbs
+
+venv/
