@@ -24,3 +24,7 @@ panels:
       val: {{.Version}}
     - key: HASH
       val: {{.GIT_HASH}}
+  boms_to_join:
+  - id: "solar-BQ25798"
+    refRenamer: "{orig}-{n}"  # Update this from the script
+    count: 3
