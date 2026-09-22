@@ -1455,7 +1455,7 @@
 		)
 		(uuid "329f77e8-6af9-4bb9-bdee-cef2d6b21266")
 	)
-	(text "Protection against cell being inserted the wrong way."
+	(text "Protection against cell being inserted the wrong way.\nhttps://www.falstad.com/s.php?s=F6XKio"
 		(exclude_from_sim no)
 		(at 106.68 39.624 0)
 		(effects
@@ -4422,7 +4422,7 @@
 				)
 			)
 		)
-		(property "Value" "1M"
+		(property "Value" "4.7M"
 			(at 104.14 50.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4465,7 +4465,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C26083"
+		(property "LCSC Part" "C208994"
 			(at 104.14 54.61 90)
 			(hide yes)
 			(show_name no)
