@@ -16856,7 +16856,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5220740"
+		(property "LCSC Part" "C136386"
 			(at 33.02 30.48 90)
 			(hide yes)
 			(show_name no)
@@ -19129,7 +19129,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5220740"
+		(property "LCSC Part" "C136386"
 			(at 265.43 25.4 90)
 			(hide yes)
 			(show_name no)

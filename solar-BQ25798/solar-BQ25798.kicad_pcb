@@ -2182,7 +2182,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5170,7 +5170,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9762,7 +9762,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12019,7 +12019,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20677,7 +20677,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21380,7 +21380,7 @@
 			(at 0 -1.43 90)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "21900ea2-8e59-4436-83e4-127d1141caa8")
+			(uuid "14798bc0-4297-48ca-8933-eb2cdd032198")
 			(effects
 				(font
 					(size 1 1)
@@ -21391,7 +21391,7 @@
 		(property "Value" "Thermistor_NTC"
 			(at 0 1.43 90)
 			(layer "F.Fab")
-			(uuid "2e271d53-de1e-4fc2-8eb0-5f4e6170b599")
+			(uuid "88307514-0706-4780-876a-d34ab467768c")
 			(effects
 				(font
 					(size 1 1)
@@ -21403,7 +21403,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2b8bd759-cbc3-499d-8c30-d50d247e80fc")
+			(uuid "dd337b0a-4d05-455f-b68d-db9fa7fcda2e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21415,7 +21415,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8df2ef2d-a5b9-48d0-8ed9-9e47be06cd1d")
+			(uuid "b7a23ea7-2fa6-4931-83e3-709dae58d737")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21775,6 +21775,17 @@
 			(layer "F.Fab")
 			(uuid "b7768e42-3851-4242-8587-2d806f22632f")
 		)
+		(fp_circle
+			(center 4.5 0)
+			(end 10 -0.5)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "b80aad20-f8d9-4847-8552-c6d38a2cb10c")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
 			(layer "F.Fab")
@@ -22091,7 +22102,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31363,7 +31374,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31827,7 +31838,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5220740"
+		(property "LCSC Part" "C136386"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32402,7 +32413,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34179,7 +34190,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -44112,7 +44123,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47419,7 +47430,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48716,7 +48727,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56449,7 +56460,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60608,7 +60619,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63779,7 +63790,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -68516,7 +68527,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5220740"
+		(property "LCSC Part" "C136386"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73285,7 +73296,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75842,7 +75853,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)

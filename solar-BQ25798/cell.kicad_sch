@@ -1495,6 +1495,26 @@
 		)
 		(uuid "13587a24-7408-47c4-b642-7cb780a508c5")
 	)
+	(text_box "https://www.falstad.com/s.php?s=BBFqgi"
+		(exclude_from_sim no)
+		(at 81.28 27.94 0)
+		(size 49.53 5.08)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "88a0c28e-becc-44ac-a15f-2d3c5aa74358")
+	)
 	(text_box "I = V/R\n\nI = 0.1/(0.03+0.022)\nI = 1.92\n\nI = 0.5/(0.03+0.022)\nI = 9.62"
 		(exclude_from_sim no)
 		(at 215.9 44.45 0)
@@ -3924,7 +3944,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C150733"
+		(property "LCSC" "C3280266"
 			(at 118.11 87.63 0)
 			(hide yes)
 			(show_name no)
