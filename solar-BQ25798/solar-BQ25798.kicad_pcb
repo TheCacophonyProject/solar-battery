@@ -21453,12 +21453,6 @@
 		(path "/b1ef4f90-0d3f-4a4e-9654-3f8fe63204f1/7b0d38ce-c389-438d-a51a-e1e7920116a3")
 		(sheetname "/BQ76920/")
 		(sheetfile "BQ76920.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21774,17 +21768,6 @@
 			)
 			(layer "F.Fab")
 			(uuid "b7768e42-3851-4242-8587-2d806f22632f")
-		)
-		(fp_circle
-			(center 4.5 0)
-			(end 10 -0.5)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "b80aad20-f8d9-4847-8552-c6d38a2cb10c")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
